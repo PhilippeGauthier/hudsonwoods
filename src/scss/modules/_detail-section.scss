@@ -1,0 +1,148 @@
+
+.details {
+	padding-top: 80px;
+	padding-bottom: 50px;
+	.title-spec {
+		display: none;
+	}
+	.title-image {
+		display: block;
+		text-align: center;
+	}
+	.back-link {
+		display: none;
+	}
+	.overlay-container {
+		display: none;
+	}
+	.floorplans {
+		display: block;
+	}
+	@include breakpoint(medium) {
+		padding-bottom: 100px;
+		padding-top: 160px;
+		&.lots {
+			padding-top: 200px;
+		}
+		.title-spec {
+			display: block;
+		}
+		.title-image {
+			display: none;
+		}
+		.back-link {
+			display: block;
+		}
+		.floorplans {
+			display: none;
+		}
+		.overlay-container {
+			display: block;
+		}
+	}
+	.col-md-5 {
+		// padding-left: 0;
+
+		i {
+			margin-right: 10px;
+			font-size: 14px;
+		}
+	}
+}
+
+.specs {
+	border-top: none;
+	@include breakpoint(medium) {
+		border-top: 2px solid $base-font-color;
+		border-bottom: 2px solid $base-font-color;
+	}
+	padding: 10px 0;
+	h3,h3,h4,p,span {
+		color: $inactive-gray;
+	}
+	h2 {
+		font-size: 36px;
+		margin-top: 10px;
+		font-weight: 300;
+	}
+	h3 {
+		margin: 20px 0 10px;
+	}
+	h4 {
+		margin: 30px 0 10px;
+		font-weight: 500;
+	}
+	span {
+		font-style: italic;
+		font-size: 18px;
+	}
+	.col-md-9 {
+		display: block;
+	}
+	p:first-of-type {
+		font-size: 18px;
+		margin: 15px 0 30px;
+	}
+	ul {
+		list-style-type: disc;
+		li {
+			font-size: 18px;
+			font-weight: 500;
+			margin-bottom: 10px;
+			line-height: 24px;
+			margin-left: 18px;
+			display: list-item;
+
+		}
+		&.no-bullet {
+			list-style-type: none;
+			li {
+				margin-left: 0;
+			}
+		}
+	}
+	.costs {
+		h4 {
+			margin: 10px 0;
+		}
+		.last{
+			font-family: $base-font-family;
+		}
+	}
+}
+
+.overlay {
+	.modal {
+		background-color: rgba(black,.6);
+	}
+	.modal-header {
+		border-bottom: none;
+		span, .close {
+			font-size: 24px;
+			color: white;
+			opacity: 1;
+		}
+	}
+	.modal-content {
+		background-color: transparent;
+		border: none;
+		box-shadow: none;
+	}
+	.modal-footer {
+		border-top: none;
+		padding-top: 0;
+		p {
+			color: white;
+			text-align: left;
+			font-size: 14px;
+			line-height: 130%;
+			font-weight: 300;
+		}
+	}
+}
+
+
+
+
+
+

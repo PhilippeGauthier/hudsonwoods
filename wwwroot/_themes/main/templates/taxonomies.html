@@ -1,0 +1,181 @@
+{{ if taxonomy_slug }}
+
+{{ theme:partial src="nav_unsticky" }}
+<section class="blog-entry">
+	<div class="container">
+
+		<div class="row blog-title-section">
+			<div class="col-md-7">
+
+					<h4 class="taxonomy">
+					{{ entries:listing folder="blog" taxonomy="true" limit="1"}}
+						POSTS BY {{ author }}
+					{{ /entries:listing }}
+					</h4>
+
+			</div>
+
+			<div class="col-md-4 col-md-offset-1">
+				<h4>BLOG AUTHORS</h4>
+			</div>
+		</div>
+
+		<div class="row blog-main">
+
+			<div class="col-md-7">
+			{{ entries:listing folder="blog" taxonomy="true" }}
+				{{ if no_results }}
+					{{ redirect url="/404" }}
+				{{ else }}
+
+				<div class="blog-content title-region listings">
+					<div class="row">
+						<div class="col-md-5">
+							<a href="{{ url }}">
+								<img class="featured" src="{{ transform
+								  src="{ featuredImage }"
+								  width="300"
+								  height="300"
+								  action="smart"
+								}}" />
+							</a>
+						</div>
+						<div class="col-md-7">
+							<div class="categories small">
+								{{ if categories_list }}
+						          <span>{{ categories_url_list }}</span>
+						        {{ endif }}
+						    </div>
+					        <a class="title" href="{{ url }}"><h3>{{ title }}</h3></a>
+							{{ if date }}
+							 <p class="publish-date"><time pubdate datetime="{{ datestamp format="Y-m-d" }}">Posted on {{ date }}</time> by <a class="taxonomy" href="{{ homepage }}blog/author/{{ author }}">{{ author }}</a>
+							 {{ endif }}
+							{{ contentSummary }}
+							<span style="margin-right: 5px;">...</span><a href="{{ url }}">Continue Reading <i class="fa fa-chevron-right"></i></a>
+						</div>
+					</div>
+				</div>
+
+				{{ endif }}
+			{{ /entries:listing }}
+			</div>
+		
+
+			<div class="col-md-4 col-md-offset-1">
+				<div class="blog-content title-region secondary">
+				<div class="tweets">
+					{{ bluebird screen_name="HudsonWoodsNY" count="5" }}
+				        {{ user }}
+				            <div class="follow">
+				                <a href="https://twitter.com/{{ screen_name }}">
+				                    <img src="{{ profile_image_url }}" alt="{{ screen_name }} on Twitter">
+				                    <span>Follow Hudson Woods on Twitter</span>
+				                </a>
+				            </div>
+				        {{ /user }}
+				        {{ tweets }}
+				            <div class="tweet">
+				                <p>{{ text }}</p>
+				                <p>
+				                    <small>
+				                        <a href="{{ tweet_url }}">{{ created_at format="g:i A, F jS, Y" }}</a>
+				                    </small>
+				                </p>
+				            </div>
+				        {{ /tweets }}
+					{{ /bluebird }}
+				</div>
+				</div>
+
+
+				<div class="blog-title-section authors">
+					<h4>BLOG AUTHORS</h4>
+				</div>
+				<div class="blog-content">
+					<div class="author-wrapper">
+						<div class="row">
+							<a href="{{ homepage }}blog/author/brittainstone">
+							<div class="col-xs-2">
+								<img src="../../_themes/main/img/avatars/4.thumbnail.jpg" alt="">
+							</div>
+							<div class="col-xs-10">BITTAIN STONE<span>Brittain Stone is a denizen of Manhattan and a weekender in the hamlet of Accord. He champions the Hudson Valley and is particularly fond of its plant life.</span></div></a>
+						</div>
+						<div class="row">
+							<a href="{{ homepage }}blog/author/drewlang">
+							<div class="col-xs-2">
+								<img src="../../_themes/main/img/avatars/5.thumbnail.jpg" alt="">
+							</div>
+							<div class="col-xs-10">DREW LANG<span>Drew Lang is the founder, architect and developer of Hudson Woods. Drew is also the principal of <a style="text-decoration: underline; font-size: 12px" href="http://langarchitecture.com">Lang Architecture.</a></span></div></a>
+						</div>
+						<div class="row">
+							<a href="{{ homepage }}blog/author/hudsonwoods">
+							<div class="col-xs-2">
+								<img src="../../_themes/main/img/avatars/hw.jpg" alt="">
+							</div>
+							<div class="col-xs-10">HUDSON WOODS</div></a>
+						</div>
+					</div>
+				</div>
+				
+
+
+			</div>
+
+		</div>
+	</div>
+</section>
+
+
+
+<!-- {{ entries:listing folder="blog" limit="10" taxonomy="true" }}
+	{{ if no_results }}
+		{{ redirect url="/404" }}
+	{{ else }}
+		<div class="block entry">
+			<header>
+				<h2 class="entry-title"><a href="{{ url }}">{{ title }}</a></h2>
+				<p class="entry-date"> {{ datestamp format="F jS, Y" }}</p>
+			</header>
+			{{ content }}
+		
+			{{ if categories }}
+			<p class="entry-meta"> Filed under {{ categories_url_list }}.</p>
+			{{ endif }}
+		</div>
+	{{ endif }}
+{{ /entries:listing }}
+
+{{ entries:pagination folder="blog" limit="10" taxonomy="yes" }}
+<div class="pagination">
+  {{ if previous_page }}
+    <a href="{{ previous_page }}">Previous Page</a>
+  {{ endif }}
+  {{ if next_page }}
+    <a href="{{ next_page }}">Next Page</a>
+  {{ endif }}
+</div>
+{{ /entries:pagination }}
+
+{{ else }}
+
+<div class="row">
+  <div class="span12">
+      <h1>Categories</h1>
+      {{ content }}
+    </div>
+</div>
+
+
+
+	{{ entries:listing folder="blog" sort_dir="desc" paginate="true" taxonomy="true" limit="10" }}
+		{{ if no_results }}
+			<p class="sorry">
+				No journal posts have been posted yet.<br>
+				Check back soon.
+			</p>
+		{{ else }}
+			{{ theme:partial src="journal-entry"}}
+		{{ endif }}
+	{{ /entries:listing }}
+
+{{ endif }}

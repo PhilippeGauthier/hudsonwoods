@@ -1,0 +1,100 @@
+title: homes
+
+fields:
+
+  heroImages:
+    display: Hero Images and Headlines
+    type: grid
+    starting_rows: 1
+    min_rows: 1
+    fields:
+      image:
+        type: file
+        browse: false
+        display: Images
+        destination: assets/img/homes
+        show_thumbnail: true
+        width: 25%
+      headline:
+        type: textarea
+        display: Headline
+      subHeadline:
+        type: textarea
+        display: Sub Headline
+
+  locationMap:
+    type: file
+    browse: false
+    display: Location Map
+    destination: assets/img/homes
+    show_thumbnail: true
+
+  floorPlans:
+    type: file
+    browse: false
+    display: Floor Plans
+    destination: assets/img/homes
+    show_thumbnail: true
+
+  materialsDownload:
+    display: Materials Options Download
+    type: file
+    browse: false
+    destination: assets/img/homes
+
+  handCraftedFinishes:
+    display: Hand Crafted Finishes
+    type: grid
+    starting_rows: 1
+    min_rows: 1
+    fields:
+      text:
+        type: text
+        display: Hand Crafted Finishes
+
+  premiumEquipment:
+    display: Premium Equipment
+    type: grid
+    starting_rows: 1
+    min_rows: 1
+    fields:
+      text:
+        type: text
+        display: Premium Equipment
+
+  aLaCarte:
+    display: A La Carte Column 1
+    type: grid
+    starting_rows: 1
+    min_rows: 1
+    fields:
+      text:
+        type: text
+        display: A La Carte Column 1
+      image:
+        type: file
+        browse: false
+        display: Images
+        destination: assets/img/homes
+        show_thumbnail: true
+
+  image_gallery:
+    display: Image Gallery
+    type: grid
+    starting_rows: 1
+    min_rows: 1
+    fields:
+      image:
+        type: file
+        browse: false
+        display: Images
+        destination: assets/img/homes
+        show_thumbnail: true
+
+  content:
+    display: Blog Entry
+    type: redactor
+    hide: true
+
+
+

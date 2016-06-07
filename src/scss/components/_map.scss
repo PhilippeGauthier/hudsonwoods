@@ -1,0 +1,34 @@
+#map { 
+	min-height: 700px !important; 
+	.availability {
+		img {
+			display: block;
+			margin-bottom: 30px;
+			max-width: 100% !important;
+		}
+		.col-md-4, .col-md-3, .col-md-5, .col-md-6 {
+			padding-left: 0;
+			padding-bottom: 10px;
+		 	p:first-child {
+		 		margin-bottom: -10px;
+		 	}
+		 	p:last-child {
+		 		margin-top: 15px;
+		 	}
+		}
+		.fa {
+			margin-right: 10px;
+			font-weight: 600;
+			font-size: 14px;
+		}
+		a {
+			padding-bottom: 10px;
+			font-weight: 600;
+			
+		}
+	}
+}
+
+.leaflet-control-attribution {
+	display: none;
+}

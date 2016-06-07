@@ -1,0 +1,84 @@
+
+
+#story {
+    background-color: $lighter-beige;
+    p {
+        font-size: 20px;
+        line-height: 36px;
+    }
+    h2 {
+        font-size: 66px;
+    }
+    a {
+        font-size: 40px;
+        font-weight: 500;
+        border-bottom: 1px solid $base-font-color;
+        color: $base-font-color;
+        margin-top: 30px;
+        &:hover {
+            color: $base-font-color;
+        }
+    }
+    .wrapper-center {
+        padding: 30px 0 60px;
+    }
+}
+
+
+
+
+#progress {
+    #instafeed {
+        min-height: 400px;
+        padding: 100px 0;
+        font-size: 0;
+    }
+    #instafeed p {
+        transition: background-color 1s;
+        @include vertical-align;
+        text-align: center;
+        color: white;
+        font-size: 18px;
+        width: 90%;
+        margin: 0 auto;
+        font-weight: 300;
+    }
+    .instagram-wrapper {
+        width: 20%;
+        display: inline-block;
+        margin: 0;
+        padding: 0;
+        font-size: 0;
+        spacing: -1;
+    }
+    .flipcard {
+        padding-bottom: 100%;
+        perspective: 400px;
+        transform-style: preserve-3d;
+        overflow: hidden;
+        background-color: black;
+        .front,.back {
+            position: absolute;
+        }
+        .front {
+            @include transition(.5s);
+            backface-visibility: hidden;
+        }
+        .back {
+            height: 100%;
+            overflow: hidden;
+            backface-visibility: hidden;
+            @include transition(.5s);
+            background-color: $yellow;
+            transform: rotateY(180deg);
+        }
+        &:hover {
+            .front {
+                transform: rotateY(-180deg);
+            }
+            .back {
+                transform: rotateY(0deg);
+            }
+        }
+    }
+}

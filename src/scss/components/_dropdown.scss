@@ -1,0 +1,85 @@
+
+.tab-pane {
+	overflow: hidden;
+}
+
+.dropdown li a:hover {
+	background-color: darken(white,10%);
+}
+.dropdown li a:focus {
+	background-color: darken(white,30%);
+}
+.nav-tabs {
+	border-bottom: none;
+	li {
+		float: none;
+	}
+}
+.nav-tabs > li > a:hover {
+	border-color: $dark-gray;
+}
+.nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
+	background-color: $dark-gray;
+	outline: none;
+}
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:focus {
+	background-color: $dark-gray;
+	color: white;
+	border: 1px solid $dark-gray;
+}
+.dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus {
+	background-color: lighten($dark-gray,20%);
+}
+
+
+
+.hudson-dropdown {
+	margin-top: 30px;
+	text-align: center;
+	width: 100%;
+	i {
+		margin-left: 10px;
+	}
+}
+
+.nav-tabs > li.dropdown.active > a, 
+.nav-tabs > li.dropdown.active > a:hover, 
+.nav-tabs > li.dropdown.active > a:focus {
+	cursor: pointer;
+	background-color: $dark-gray;
+	color: white;
+	border: 1px solid $dark-gray;
+}
+
+.nav-tabs > li.dropdown li {
+	display: block;
+}
+
+.dropdown {
+	margin: 0 auto;
+	background-color: $dark-gray;
+	a {
+		color: white;
+		text-transform: uppercase;
+	}
+}
+
+.dropdown-menu {
+	width: 100%;
+}
+
+.upgrade-dropdown {
+	display: block;
+	background-color: $lighter-gray;
+	@include breakpoint(medium) {
+		display: none;
+	}
+}
+
+.in-thea-area-dropdown {
+	display: block;
+	background-color: $lighter-beige;
+	@include breakpoint(medium) {
+		display: none;
+	}
+}

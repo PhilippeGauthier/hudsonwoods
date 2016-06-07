@@ -1,0 +1,348 @@
+nav {
+	width: 100%;
+	z-index: 1001;
+	&.navbar {
+		border-radius: 0;
+		border: none;
+		position: fixed;
+		margin-bottom: 0;
+		@include transition(all .5s);
+		background-color: $beige;
+		@include breakpoint(medium) {
+			background-color: transparent;
+			padding-top: 15px;
+			.collapse.navbar-collapse {
+				background-color: transparent;
+			}
+		}
+
+		.navbar-toggle, .navbar-toggle:hover, .navbar-toggle:focus {
+			border-color: transparent;
+			background-color: transparent;
+			.icon-bar {
+				background-color: $gray;
+			}
+		}
+		.navbar-collapse {
+			background-color: $gray;
+			border-color: $gray;
+		} 
+		&.navbar-default {
+			border-color: transparent;
+			.navbar-nav {
+				li {
+					a {
+						text-transform: uppercase;
+						text-align: center;
+						color: #fff;
+						font-weight: 500;
+					}
+				}
+			}
+			@include breakpoint(medium) {
+				color: white;
+				.navbar-nav {
+					li {
+						a {
+							color: white;
+							padding: 30px 15px;
+							height: 100%;
+							width: 100%;
+							font-size: 14px;
+							color: white;
+							text-transform: uppercase;
+							&.current {
+								color: white;
+							}
+						}
+					}
+				}				
+			}
+			@include breakpoint (small) {
+				&.stuck, &.fixed {
+					background-color: $beige;
+					padding-top: 0;
+					a.navbar-brand {
+						background-image: url("../img/hw_logo_dark.svg");
+					}
+
+					ul li a {
+						color: $inactive-gray;
+						&.current, &:hover {
+							color: $dark-gray;
+						}
+					}
+				}				
+			}
+
+		}
+		.navbar-brand {
+			background-image: url("../img/hw_logo_dark_small.svg");
+			background-repeat: no-repeat;
+			height: 35px;
+			width: 74px;
+			margin-left: 15px;
+			margin-top: 8px;
+			@include breakpoint(medium) {
+				background-image: url("../img/hw_logo.svg");
+				margin-top: 0;
+				margin-top: 15px;
+				margin-left: 0 !important;
+				padding-bottom: 0;	
+				height: 47px;
+				width: 99px;		
+			}
+		}
+	}
+}
+
+.nav li a:hover, .nav li a:focus {
+	background-color: transparent;
+}
+
+.sticky-wrapper {
+	display: none;
+	@include breakpoint(medium) {
+		display: block;
+	}
+}
+
+#secondary-nav {
+	background-color: $dark-gray;
+	&.stuck {
+		top: 50px;
+	}
+	@include breakpoint(medium) {
+		&.stuck {
+			top: 80px;
+		}
+		&.map-nav {
+			top: 80px;
+			height: 44px !important;
+		}
+	}
+
+	text-align: left;
+	ul {
+		width: 100%;
+		li {
+			display: inline-block;
+			margin-right: 40px;
+			@include transition(.35s);
+			a {
+				text-transform: uppercase;
+				text-align: center;
+				color: $light-gray;
+				font-size: 14px;
+				line-height: 20px;
+				display: inline-block;
+				padding: 14px 0 10px;
+				height: 100%;
+				width: 100%;
+				font-weight: 500;
+				&:hover {
+					color: white;
+				}
+			}
+
+			&.active {
+				
+				a {
+					border-bottom: 4px solid white;
+					color: white;
+					padding: 14px 0 6px;
+				}
+			}
+		}
+
+		&#homes {
+			li:first-of-type {
+				display: none;
+			}
+		}
+		&#availability {
+			text-align: center;
+		}
+		&#in-the-area {
+			li {
+				text-align: center;
+				@include transition(.2s);
+				color: $light-gray;
+				a {
+					text-transform: uppercase;
+					text-align: center;
+					color: $light-gray;
+					font-size: 14px;
+					line-height: 20px;
+					display: inline-block;
+					padding: 14px 0 10px;
+					height: 100%;
+					width: 100%;
+					&.active, &:hover {
+						padding-bottom: 6px;
+					}
+					&#all {
+						&:hover,&.active {
+							color: white;
+						}
+						&.active {
+							border-bottom: 4px solid white;
+						}
+
+					}
+					&#sleep {
+						&:hover,&.active {
+							color: $sleep;
+						}
+						&.active {
+							border-bottom: 4px solid $sleep;
+						}
+					}
+					&#eat {
+						&:hover,&.active {
+							color: $eat;
+						}
+						&.active {
+							border-bottom: 4px solid $eat;
+						}
+					}
+					&#sip {
+						&:hover,&.active {
+							color: $sip;
+						}
+						&.active {
+							border-bottom: 4px solid $sip;
+						}
+					}
+					&#culture {
+						&:hover,&.active {
+							color: $culture;
+						}
+						&.active {
+							border-bottom: 4px solid $culture;
+						}
+					}
+					&#swing {
+						&:hover,&.active {
+							color: $swing;
+						}
+						&.active {
+							border-bottom: 4px solid $swing;
+						}
+					}
+					&#mind-and-body {
+						&:hover,&.active {
+							color: $mind-and-body;
+						}
+						&.active {
+							border-bottom: 4px solid $mind-and-body;
+						}
+					}
+					&#swim {
+						&:hover,&.active {
+							color: $swim;
+						}
+						&.active {
+							border-bottom: 4px solid $swim;
+						}
+					}
+					&#ski {
+						&:hover,&.active {
+							color: $ski;
+						}
+						&.active {
+							border-bottom: 4px solid $ski;
+						}
+					}
+					&#trails {
+						&:hover,&.active {
+							color: $trails;
+						}
+						&.active {
+							border-bottom: 4px solid $trails;
+						}
+					}
+					&#pick-and-grow {
+						&:hover,&.active {
+							color: $pick-and-grow;
+						}
+						&.active {
+							border-bottom: 4px solid $pick-and-grow;
+						}
+					}
+				}
+				
+			}
+		}
+		&#about {
+			li:first-of-type {
+				display: none;
+			}
+		}
+	}
+
+
+	#upgrades-nav a {
+		// pointer-events:none;
+	}
+}
+
+.secondary-nav-lots {
+	height: 44px;
+	width: 100%;
+	position: fixed;
+	z-index: 100;
+	top: 80px;
+	margin-bottom: 40px;
+	background-color: $dark-gray;
+	a {
+		color: white;
+		text-transform: uppercase;
+		line-height: 46px;
+		font-size: 13px;
+		i {
+			margin-right: 10px;
+		}
+	}
+}
+
+.anchor {
+	display: block !important;
+	position: relative !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	height: 0 !important;
+	top: -184px;
+	&.hero-anchor {
+		top: -124px;
+	}
+	&.large {
+		top: -224px;
+	}
+	visibility: hidden !important;
+	&.availability,&.in-the-area {
+		top: -124px;
+	}
+}
+
+#header-in-the-area, #header-availability {
+	.sticky-wrapper {
+		height: 44px;
+	}
+}
+
+#gallery {
+	h2 {
+		margin-top: 30px;
+	}
+	.gallery-nav {
+		margin-bottom: 10px;
+		span {
+			margin: 0 10px;
+		}
+	}
+	.current {
+		font-weight: 700;
+		margin-bottom: 30px;
+	}
+}

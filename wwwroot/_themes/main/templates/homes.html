@@ -1,0 +1,241 @@
+<section id="header-homes" class="hero-header">
+{{ theme:partial src="nav" }}
+
+<div class="slick-carousel" >
+{{ heroImages }}
+
+      <div class="hero" style="background-image: url( {{ path src="{{ image }}" }} );">
+        <div class="container scrollme">
+        <div class="animateme" data-when="exit" data-from="0" data-to="0.5" data-opacity="0" data-translatey="100" style="opacity: 1; -webkit-transform: translate3d(0px, 100px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(1);">
+    <h1>{{ headline }}</h1>
+    {{ if subHeadline|not_empty }}
+    <h3>{{ subHeadline }}</h3>
+    {{ endif }}
+        </div>
+
+      </div>
+    </div>
+
+{{ /heroImages }}
+</div>
+{{ theme:partial src="nav_homes" }}
+</section>
+
+
+
+<section id="location" class="hero content" style="background-image: url( {{ path src="{{ locationMap }}" }} );">
+<a href="" class="anchor" id="location-anchor"></a>
+<div class="container">
+<div class="row">
+	<div class="col-xs-12 col-sm-3">
+			<h2>Home Locations</h2>
+			<p>Encompassing 131 acres, Hudson Woods features 26 architect-designed dwellings meticulously crafted from locally-sourced, sustainable materials. Click below to see our initial sales offering.</p>
+	<a class="button" href="{{ homepage }}availability">See Availability</a>
+	</div>
+</div>
+</div>
+</section>
+
+<section id="floor-plans" class="content large">
+<a href="" class="anchor large large" id="floor-plans-anchor"></a>
+<div class="container">
+<div class="row">
+	<div class="col-md-3">
+	<h2>Standard <br>Floor Plan</h2>
+	<p>The Standard Floor Plan is designed to get the most from the square footage whilst still feeling light and airy. Click below to see Additional square feet and other home enhancements.</p>
+	<a class="button" href="{{ homepage }}upgrades">See Upgrades</a>
+	</div>
+	<div class="col-sm-8 col-md-6 col-md-offset-1">
+		<img src="{{ path src="{{ floorPlans }}" }}" alt="">
+	</div>
+	<div class="col-sm-4 col-md-2 floor-plan-specs">
+
+			<h2>2,800</h2>
+			<h4>SQFT</h4>
+			<h2>3</h2>
+			<h4>BEDROOMS</h4>
+			<h2>2</h2>
+			<h4>BATHS</h4>
+			<h2>GARAGE / STUDIO</h2>
+			<h4>+ CARPORT</h4>
+
+	</div>
+</div>
+</div>
+</section>
+
+
+<section id="materials"  class="content large beige">
+<a href="" class="anchor large" id="materials-anchor"></a>
+<div class="container">
+<div class="row">
+	<div class="col-md-3">
+		<h2>Colors &amp; Materials</h2>
+		<p>The standard home offers a variety of material and color choices for the siding, kitchen tiles and roof</p>
+		<a target="_blank" class="button" href="{{ materialsDownload }}">Download Options</a>
+	</div>
+	<div class="col-sm-12 col-md-8 col-md-offset-1">
+	
+			<h4>Siding Materials</h4>		
+			<div class="row">
+				<div class="col-xs-6 col-sm-3 large-wrapper">
+					<div class="large">
+						<div class="circle-margin"></div>
+						<div class="circle-tile black-cedar"><span class="white">Black Cedar</span></div>
+					</div>
+				</div>
+				<div class="col-xs-6 col-sm-3 large-wrapper">
+					<div class="large">
+						<div class="circle-margin"></div>
+						<div class="circle-tile natural-cedar"><span class="white">Natural Cedar</span></div>
+					</div>
+				</div>
+			</div>
+
+			<h4>Kitchen Tile Colors</h4>
+			<div class="row">
+				<div class="col-xs-6 col-sm-2 small-wrapper small-wrapper">
+					<div class="small">
+						<div class="circle-margin"></div>
+						<div class="circle-tile opaque-white"><span>New Opaque White</span></div>
+					</div>
+				</div>
+				<div class="col-xs-6 col-sm-2 small-wrapper">
+					<div class="small">
+						<div class="circle-margin"></div>
+						<div class="circle-tile campari-red"><span class="white">Campari Red</span></div>
+					</div>
+				</div>
+				<div class="col-xs-6 col-sm-2 small-wrapper">
+					<div class="small">
+						<div class="circle-margin"></div>
+						<div class="circle-tile jade-porcelain"><span class="white">Jack Porecelain</span></div>
+					</div>
+				</div>
+				<div class="col-xs-6 col-sm-2 small-wrapper">
+					<div class="small">
+						<div class="circle-margin"></div>
+						<div class="circle-tile mid-century-white"><span>Mid Century White</span></div>
+					</div>
+				</div>
+				<div class="col-xs-6 col-sm-2 small-wrapper">
+					<div class="small">
+						<div class="circle-margin"></div>
+						<div class="circle-tile pomegranate"><span class="white">Pomegranate</span></div>
+					</div>
+				</div>
+				<div class="col-xs-6 col-sm-2 small-wrapper">
+					<div class="small">
+						<div class="circle-margin"></div>
+						<div class="circle-tile jade-manganese"><span class="white">Jade Manganese</span></div>
+					</div>
+				</div>
+			</div>
+
+			<h4>Roof Colors</h4>
+			<div class="row">
+				<div class="col-xs-6 col-sm-2 small-wrapper">
+					<div class="small">
+						<div class="circle-margin"></div>
+						<div class="circle-tile slate-gray"><span class="white">Slate Gray</span></div>
+					</div>
+				</div>
+				<div class="col-xs-6 col-sm-2 small-wrapper">
+					<div class="small">
+						<div class="circle-margin"></div>
+						<div class="circle-tile dark-gray"><span class="white">Dark Gray</span></div>
+					</div>
+				</div>
+				<div class="col-xs-6 col-sm-2 small-wrapper">
+					<div class="small">
+						<div class="circle-margin"></div>
+						<div class="circle-tile hartford-green"><span class="white">Hartford Green</span></div>
+					</div>
+				</div>
+				<div class="col-xs-6 col-sm-2 small-wrapper">
+					<div class="small">
+						<div class="circle-margin"></div>
+						<div class="circle-tile antique-black"><span class="white">Antique Black</span></div>
+					</div>
+				</div>
+				<div class="col-xs-6 col-sm-2 small-wrapper">
+					<div class="small">
+						<div class="circle-margin"></div>
+						<div class="circle-tile matte-black"><span class="white">Matte Black</span></div>
+					</div>
+				</div>
+			</div>
+
+	</div>
+</div>
+</div>
+</section>
+
+
+<section id="finishes"  class="content large">
+<a href="" class="anchor large" id="finishes-anchor"></a>
+<div class="container">
+
+	<h2>Finishes &amp; Equipment</h2>
+
+	<div class="row">
+		<div class="col-md-4">
+				<img src="_themes/main/img/Hand-Crafted-Icon.png" alt="">
+				<h3>Hand Crafted Finishes</h3>
+				<ul>
+					{{ handCraftedFinishes }}
+						<li>{{ text }}</li>
+					{{ /handCraftedFinishes }}
+				</ul>
+		</div>	
+			
+		<div class="col-md-4 col-md-offset-1">
+			<img src="_themes/main/img/Premium-Equip-icon.png" alt="">
+			<h3>Premium Equipment</h3>
+			<ul>
+				{{ premiumEquipment }}
+					<li>{{ text }}</li>
+				{{ /premiumEquipment }}
+			</ul>
+		</div>
+	</div>
+
+</div>
+</section>
+
+<section id="a-la-carte" class="content large centered beige">
+<a href="" class="anchor large" id="a-la-carte-anchor"></a>
+	<div class="container">
+		<div class="row">
+			<div class="wrapper-center col-md-8 col-md-offset-2">
+				<h2>A La Carte Services</h2>
+				<p>The Hudson Woods property management will offer a variety of different services to owners. From site management and maintenance to home and personal assistance.</p>
+			</div>
+			<ul class="col-xs-12 col-md-10 col-md-offset-1">
+			{{ aLaCarte }}
+				<li class="col-xs-12 col-sm-6 col-md-3">
+					<img src="{{ path src="{{ image }}" }}" alt="">
+					<h4>{{ text }}</h4>
+				</li>
+			{{ /aLaCarte }}
+			</ul>
+		</div>
+	</div>
+</section>
+
+<!-- <section id="gallery" class="content large centered">
+<a href="" class="anchor large" id="gallery-anchor"></a>
+	<div class="container">
+		<h2>Image Gallery</h2>
+		<div class="row">
+		<div class="col-md-10 col-md-offset-1">
+		<div class="fotorama"  data-nav="thumbs">
+			{{ image_gallery }}
+		    <a href="{{ image }}"><img src="{{ path src="{{ image }}" }}" alt=""></a>
+			{{ /image_gallery }}
+		</div>
+		</div>
+		</div>
+	</div>
+</section> -->
+

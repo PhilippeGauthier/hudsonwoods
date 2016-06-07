@@ -1,0 +1,27 @@
+title: makers
+
+fields:
+  image:
+    type: file
+    browse: false
+    display: Image
+    destination: assets/img/makers
+    show_thumbnail: true
+  logo:
+    type: file
+    browse: false
+    display: Logo
+    destination: assets/img/makers
+    show_thumbnail: true
+  makerTitle:
+    type: text
+    display: Maker title
+  makerTagline:
+    type: text
+    display: Tagline
+  link:
+    type: text
+    display: link
+
+
+

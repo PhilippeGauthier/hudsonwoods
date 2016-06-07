@@ -1,0 +1,81 @@
+/**
+*
+* Utils
+*
+**/
+
+
+// PG Variables
+$beige            :#bdbbb3;
+$light-beige        :#cccabf;
+$lighter-beige      :#ebe9e2;
+$base-font-color    :#6e736c;
+$light-font-color   :#9a9d98;
+$yellow       :#c9be69;
+$bright-yellow      :#dfcc35;
+$light-gray         :#cccccc;
+$lighter-gray       :#f3f3f3;
+$inactive-gray      :#777777;
+$dark-gray        :#4e4f54;
+$blue         :#00aeef;
+$pink         :#b1277d;
+$green        :#3cb878;
+$brown        :#736357;
+$purple       :#32004b;
+$rose         :#f1433f;
+$teal         :#70b7ba;
+$lavendar         :#8393ca;
+
+$sleep        :#66bbe1;
+$eat          :#6fbe44;
+$sip        :#f48d99;
+$culture        :#ff9b63;
+$swing        :#c6d1d1;
+$mind-and-body    :#ffe500;
+$swim         :#93d8ed;
+$trails       :#f3ad1c;
+$ski          :#b0ccd5;
+$pick-and-grow    :#bfe700;
+
+
+
+$base-font-size: 22px;
+$base-line-height: 32px;
+$rhythm-unit: 'rem';
+$base-font-family: "proxima-nova", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$headline-font: "adelle", Georgia,Cambria,"Times New Roman",Times,serif;
+$subHeadline-font: "hurme-bold",Georgia,Cambria,"Times New Roman",Times,serif;
+$fontSmall: 13px !default;
+$fontBase: 16px  !default;
+$fontMedium: 20px !default;
+$fontLarge: 26px !default;
+$fontXLarge: 36px !default;
+$fontXXLarge: 80px !default;
+$fontHuge: 100px !default;
+
+$small-screen-width: 768px;
+
+@mixin vertical-align {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+
+@mixin breakpoint($media) {
+    @if $media == small {
+        /* Landscape phone to portrait tablet */
+        @media (min-width: 767px) {@content; }
+    }
+    @else if $media == medium {
+        /* Portrait tablet to landscape and desktop */
+        @media (min-width: 992px) { @content; }
+    }
+    @else  if $media== large {
+        /* Large desktop */
+        @media (min-width: 1200px) { @content; }
+    }
+}
+
+
+

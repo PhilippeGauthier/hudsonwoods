@@ -1,0 +1,22 @@
+title: Trails
+
+fields:
+
+  activity:
+    display: Activity Type
+    type: text
+    default: trails
+    hide: true
+
+  image:
+    type: file
+    browse: false
+    display: Image
+    destination: assets/img/in-the-area
+    show_thumbnail: true
+
+  content:
+    type: redactor
+    display: Content
+
+

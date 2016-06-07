@@ -1,0 +1,68 @@
+title: About
+
+fields:
+
+  heroImages:
+    display: Hero Images and Headlines
+    type: grid
+    starting_rows: 1
+    min_rows: 1
+    fields:
+      image:
+        type: file
+        browse: false
+        display: Images
+        destination: assets/img/upgrades
+        show_thumbnail: true
+        width: 25%
+      headline:
+        type: textarea
+        display: Headline
+      subHeadline:
+        type: textarea
+        display: Sub Headline
+
+  content:
+    display: Blog Entry
+    type: redactor
+    hide: true
+
+  partnerHero:
+    type: file
+    browse: false
+    display: Partner Hero Image
+    destination: assets/img/about
+    show_thumbnail: true
+
+  partnerItems:
+    display: Individual Parnter Info
+    type: grid
+    starting_rows: 1
+    min_rows: 1
+    fields:
+      image:
+        type: file
+        browse: false
+        display: Image
+        destination: assets/img/about
+        show_thumbnail: true
+      webAddress:
+        type: textarea
+        display: Full Web Address
+      headline:
+        type: textarea
+        display: Headline
+      subHeadline:
+        type: textarea
+        display: Sub Headline
+      description:
+        type: textarea
+        display: Sub Headline
+
+  makerHero:
+    type: file
+    browse: false
+    display: Maker Hero Image
+    destination: assets/img/about
+    show_thumbnail: true
+

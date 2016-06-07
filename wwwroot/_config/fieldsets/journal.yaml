@@ -1,0 +1,44 @@
+title: Journal
+
+fields:
+
+  author:
+    display: Author
+    required: false
+    type: users
+    default: HudsonWoods
+
+  categories:
+    display: Categories
+    type: suggest
+    create: true
+    multiple: true
+    instructions:
+      below: "Create or select an existing category."
+    taxonomy:
+      folder: news #make sure you rename this to the folder name of your blog
+      type: categories
+
+  featuredImage:
+    type: file
+    browse: false
+    display: Featured Image
+    destination: assets/img/journal
+    show_thumbnail: true
+
+  contentSummary:
+    type: redactor
+    display: Text Only Content Summary For Main Jornal Page 
+
+  videoEmbed:
+    type: text
+    display: Use video embed code here for full width videos - will appear at top of post
+
+  content:
+    display: Blog Entry
+    type: redactor
+    image_dir: assets/img/journal
+    resize:
+      width: 700
+      quality: 100
+      upsize: false

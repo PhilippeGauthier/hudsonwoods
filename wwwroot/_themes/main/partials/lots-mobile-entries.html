@@ -1,0 +1,57 @@
+<div class="details details-entry">
+		    				<div class="row">
+	
+		    					<div class="col-md-6">
+		    						<h2 class="title-image">{{ title }}</h2>
+		    						{{ if imageSingle|not_empty }}
+		    						<img src="{{ imageSingle }}" alt="">
+		    						{{ endif }}
+	
+		    						{{ if imageGallery|not_empty }}
+		    						<div class="sp-wrap">
+		    							{{ imageGallery }}
+		    							<a href="{{ image }}"><img src="{{ image }}" alt=""></a>
+		    							{{ /imageGallery }}
+		    						</div>
+		    						{{ endif }}
+		    					</div>
+	
+		    					<div class="col-md-5 col-md-offset-1">
+		    						<div class="specs">
+		    							<h2 class="title-spec">{{ title }}</h2>
+		    							{{ content }}
+		    							<ul>
+	
+		    								<li>Availability: <span>{{ availability }}</span></li>
+		    								<li>Size: <span>{{ size }}</span></li>
+		    								<li>Cost: <span>{{ cost }}</span></li>
+	
+		    							</ul>	
+		    						</div>
+	
+		    						<div class="overlay-container">
+		    							<a href="" class="button button-overlay" data-toggle="modal" data-target="#floorPlans"><i class="fa fa-search"></i>Floor Plans</a>
+	
+		    							<div class="overlay">
+		    								<div class="modal fade" id="floorPlans" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		    									<div class="modal-dialog modal-lg">
+		    										<div class="modal-content">
+		    											<div class="modal-header">
+		    												<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+		    											</div>
+		    											<div class="modal-body">
+		    												<img src="{{ floorplans }}" alt="">
+		    											</div>
+		    											<div class="modal-footer">
+		    												<p>All information is from sources believed to be reliable and subject to change of price, rental, commission or other conditions, prior sale, lease or financing or withdrawal without notice. No representation is made as to the accuracy of any description. All measurements and square footage are approximate and all information should be confirmed by customer. All rights to content, photographs and graphics are reserved. Customer should consult with its consul regarding closing costs. Nothing heron shall constitute an offer or solicitation with respect to the purchase or sale of any property in any jurisdiction in which such offer or solicitation is not authorized or to any person to whom it would be unlawful to make an offer or solicitation.</p>
+		    											</div>
+		    										</div>
+		    									</div>
+		    								</div>
+		    							</div>
+		    						</div>
+		    						<img src="{{ floorplans }}" class="floorplans"></img>
+		    					</div>
+	
+		    				</div>
+		    			</div>	

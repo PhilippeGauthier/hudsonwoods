@@ -1,0 +1,190 @@
+<section id="header-upgrades" class="hero-header">
+{{ theme:partial src="nav" }}
+
+<div class="slick-carousel-upgrades" >
+{{ heroImages }}
+
+      <div class="hero" style="background-image: url( {{ image }} );">
+      <div class="container scrollme">
+        <div class="animateme col-md-8 col-md-offset-2" data-when="exit" data-from="0" data-to="0.55" data-opacity="0" data-translatey="100" style="opacity: 1; -webkit-transform: translate3d(0px, 100px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(1);">
+    <h1>{{ headline }}</h1>
+    {{ if subHeadline|not_empty }}
+    <h3>{{ subHeadline }}</h3>
+    {{ endif }}
+        </div>
+
+      </div>
+    </div>
+{{ /heroImages }}
+</div>
+{{ theme:partial src="nav_upgrades" }}
+</section>
+
+
+<div class="upgrade-dropdown">
+  <div class="container">
+  <div class="col-sm-4"></div>
+  <div class="col-sm-4">
+    <ul class="nav nav-tabs hudson-dropdown" role="tablist">
+    <li class="dropdown">
+    <a href="#" id="myTabDrop1" class="dropdown-toggle" data-toggle="dropdown">Upgrades<i class="fa fa-chevron-down"></i></a>
+      <ul class="dropdown-menu">
+  
+          <li>
+            <a href="#all" tabindex="-1" role="tab" data-toggle="tab">All</a>
+          </li>
+          <li>
+            <a href="#house" tabindex="-1" role="tab" data-toggle="tab">House</a>
+          </li>
+          <li>
+            <a href="#site" tabindex="-1" role="tab" data-toggle="tab">Site</a>
+          </li>
+          <li>
+            <a href="#land" tabindex="-1" role="tab" data-toggle="tab">Land</a>
+          </li>
+          <li>
+            <a href="#equipment" tabindex="-1" role="tab" data-toggle="tab">Equipment</a>
+          </li>  
+            
+      </ul>
+    </li>
+    </ul>
+  </div>
+  </div>
+</div>
+  
+
+<section id="upgrades" class="content content-tiles centered">
+  <a href="" class="anchor upgrades" id="upgrades-anchor"></a>
+    <div class="container">
+  
+      <div class="row">
+        <div class="tab-content">
+        
+          <div id="all" class="tab-pane fade in active">
+            {{ entries:listing folder="upgrades/house|upgrades/site|upgrades/equipment|upgrades/land" sort_dir="asc" }}
+            <div class="col-xs-12 col-sm-6 col-md-4 tile">
+                <div class="upgrades all {{ categories_spaced_list }}">
+                  <a href="{{ url }}">
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="mask-overlay"></div>
+                        <div class="masked-image" style="background-image: url( {{ previewImage }} );"></div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="upgrade-details col-md-12">
+                        <h3>{{ title }}</h3>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            {{ /entries:listing }}
+          </div>
+        
+          <div id="house" class="tab-pane fade">
+            {{ entries:listing folder="upgrades/house" sort_dir="asc" }}
+            <div class="col-xs-12 col-sm-6 col-md-4 tile">
+                <div class="upgrades all {{ categories_spaced_list }}">
+                  <a href="{{ url }}">
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="mask-overlay"></div>
+                        <div class="masked-image" style="background-image: url( {{ previewImage }} );"></div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="upgrade-details col-md-12">
+                        <h3>{{ title }}</h3>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            {{ /entries:listing }}
+          </div>
+        
+          <div id="site" class="tab-pane fade">
+            {{ entries:listing folder="upgrades/site" sort_dir="asc" }}
+            <div class="col-xs-12 col-sm-6 col-md-4 tile">
+                <div class="upgrades all {{ categories_spaced_list }}">
+                  <a href="{{ url }}">
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="mask-overlay"></div>
+                        <div class="masked-image" style="background-image: url( {{ previewImage }} );"></div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="upgrade-details col-md-12">
+                        <h3>{{ title }}</h3>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            {{ /entries:listing }}
+          </div>
+        
+          <div id="land" class="tab-pane fade">
+            {{ entries:listing folder="upgrades/land" sort_dir="asc" }}
+            <div class="col-xs-12 col-sm-6 col-md-4 tile">
+                <div class="upgrades all {{ categories_spaced_list }}">
+                  <a href="{{ url }}">
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="mask-overlay"></div>
+                        <div class="masked-image" style="background-image: url( {{ previewImage }} );"></div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="upgrade-details col-md-12">
+                        <h3>{{ title }}</h3>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            {{ /entries:listing }}
+          </div>
+        
+          <div id="equipment" class="tab-pane fade">
+            {{ entries:listing folder="upgrades/equipment" sort_dir="asc" }}
+            <div class="col-xs-12 col-sm-6 col-md-4 tile">
+                <div class="upgrades all {{ categories_spaced_list }}">
+                  <a href="{{ url }}">
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="mask-overlay"></div>
+                        <div class="masked-image" style="background-image: url( {{ previewImage }} );"></div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="upgrade-details col-md-12">
+                        <h3>{{ title }}</h3>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            {{ /entries:listing }}
+          </div>
+        
+        </div>
+        
+          </div>
+      </div>
+  
+  </div>
+</section>

@@ -1,0 +1,52 @@
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*.sass-cache*
+
+# wwwroot files #
+######################
+wwwroot/_cache
+wwwroot/_logs
+wwwroot/!_logs/index.html
+wwwroot/assets/
+wwwroot/_content/
+wwwroot/_config/users/
+wwwroot/_forms/
+wwwroot/_themes/main/js/AvailabilityGeojson.js
+wwwroot/_themes/main/js/InTheAreaGeejson.js
+
+
+.bundle
+db/*.sqlite3
+log/*.log
+tmp/**/*
+
+# Compiled source #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Design generated files #
+######################
+*.psd
+*.ai
+*.sketch
+
+npm-debug.log
+*.sublime-project
+*.sublime-workspace
+
+node_modules/*
+package.json
+bower_components
+backup/

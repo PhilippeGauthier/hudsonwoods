@@ -1,0 +1,75 @@
+title: contact
+
+fields:
+
+  heroImages:
+    display: Hero Images and Headlines
+    type: grid
+    starting_rows: 1
+    min_rows: 1
+    fields:
+      image:
+        type: file
+        browse: false
+        display: Images
+        destination: assets/img/upgrades
+        show_thumbnail: true
+        width: 25%
+      headline:
+        type: textarea
+        display: Headline
+      subHeadline:
+        type: textarea
+        display: Sub Headline
+
+  salesCompany:
+  	type: text
+  	display: Sales Company Name
+
+  salesContacts:
+    display: Sales Contacts
+    type: grid
+    starting_rows: 1
+    min_rows: 1
+    fields:
+      salesName:
+        type: text
+        display: Salesperson Name
+      phoneNumber:
+        type: text
+        display: Phone Number
+      emailAddress:
+        type: text
+        display: Email Address
+
+  mediaCompany:
+  	type: text
+  	display: Media Company Name
+
+  mediaContacts:
+    display: Media Contacts
+    type: grid
+    starting_rows: 1
+    min_rows: 1
+    fields:
+      mediaName:
+        type: text
+        display: Media Person Name
+      phoneNumber:
+        type: text
+        display: Phone Number
+      emailAddress:
+        type: text
+        display: Email Address
+
+  visitImage:
+    type: file
+    browse: false
+    display: Map Image
+    destination: assets/img/contact
+    show_thumbnail: true
+
+  content:
+    display: Blog Entry
+    type: redactor
+    hide: true

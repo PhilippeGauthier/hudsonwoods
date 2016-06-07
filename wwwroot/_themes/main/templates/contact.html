@@ -1,0 +1,118 @@
+
+<section id="header-contact" class="hero-header">
+
+  {{ theme:partial src="nav" }}
+
+  <div class="slick-carousel" >
+    {{ heroImages }}
+      <div class="hero" style="background-image: url( {{ image }} );">
+        <div class="container scrollme">
+          <div class="animateme" data-when="exit" data-from="0" data-to="0.5" data-opacity="0" data-translatey="100" style="opacity: 1; -webkit-transform: translate3d(0px, 100px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(1);">
+            <h1>{{ headline }}</h1>
+            {{ if subHeadline|not_empty }}
+            <h3>{{ subHeadline }}</h3>
+            {{ endif }}
+          </div>
+        </div>
+      </div>
+    {{ /heroImages }}
+  </div>
+</section>
+
+<section id="contact" class="content">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-md-3">
+
+        <h3>Sales Enquiries</h3>
+
+        <form role="form" id="form1" name="form1" class="wufoo topLabel page" autocomplete="off" enctype="multipart/form-data" method="post" novalidate="" action="https://sandersonj.wufoo.com/forms/z1jr7bc1537af2/#public">
+          <input type="hidden" name="idstamp" id="idstamp" value="YourPostKey">
+          <div class="form-group">
+            <label id="title8" for="Field8" class="desc">Name<span>Required</span></label>
+            <input id="Field8" name="Field8" type="text" class="form-control" value="" tabindex="1" onkeyup="">
+          </div>
+
+          <div class="form-group">
+            <label id="Field3" for="Field3" class="desc">Email Address<span>Required</span></label>
+            <input id="Field3" name="Field3" type="email" spellcheck="false" tabindex="2" class="form-control">
+          </div>
+          <label for="exampleTextArea1" id="title4" class="desc">How Can We Help?</label>
+          <textarea id="Field4" name="Field4" tabindex="3" class="form-control text-area" rows="10"></textarea>
+
+          <div class="form-group">
+            <div class="checkbox">
+              <label>
+                <input id="saveForm" name="saveForm" class="submit" tabindex="4" type="checkbox">Subscribe to email updates
+              </label>
+            </div>
+          </div>
+
+          <button type="submit" id="contact-submit" class="btn btn-green">Submit</button>
+          <li class="hide">
+            <label for="comment">Do Not Fill This Out</label>
+            <textarea name="comment" id="comment" rows="1" cols="1"></textarea>
+            <input type="hidden" id="idstamp" name="idstamp" tabindex="5" value="kDKnwgsxUQRl99RUwj7mCA+Rjx0E7+LyTxdubka1d5c=">
+          </li>
+
+        </form>
+      </div>
+
+      <div class="col-md-offset-1 col-md-3">
+        <h3>Sales Contacts</h3>
+
+        {{ if salesCompany|not_empty }}
+        <p>{{ salesCompany }}</p>
+        {{ endif }}
+
+        {{ salesContacts }}
+        <ul class="contact-info">
+          {{ if salesName|not_empty }}
+          <li>{{ salesName }}</li>
+          {{ endif }}
+          {{ if phoneNumber|not_empty }}
+          <li>{{ phoneNumber }}</li>
+          {{ endif }}
+          {{ if emailAddress|not_empty }}
+          <li><a id="sales-contact" href="mailto:{{ emailAddress }}">{{ emailAddress }}</a></li>
+          {{ endif }}
+        </ul>
+        {{ /salesContacts }}
+
+     </div>
+
+     <div class="col-md-offset-1 col-md-3">
+        <h3>Media Contacts</h3>
+        {{ if mediaCompany|not_empty }}
+        <p>{{ mediaCompany }}</p>
+        {{ endif }}
+
+        {{ mediaContacts }}
+          <ul class="contact-info">
+            {{ if mediaName|not_empty }}
+            <li>{{ mediaName }}</li>
+            {{ endif }}
+            {{ if phoneNumber|not_empty }}
+            <li>{{ phoneNumber }}</li>
+            {{ endif }}
+            {{ if emailAddress|not_empty }}
+            <li><a id="media-contact" href="mailto:{{ emailAddress }}">{{ emailAddress }}</a></li>
+            {{ endif }}
+          </ul>
+        {{ /mediaContacts }}
+
+     <h3 class="map">Visit Us</h3>
+     <div id="map-info">
+      <a href="https://www.google.com/maps/preview/place/Hudson+Woods/@41.8838397,-74.3105647,17z/data=!4m2!3m1!1s0x0:0xb071e22e4a6d3201?hl=en" target="blank"><img src="{{ visitImage }}" alt=""></a>
+      <br>
+      <a href="https://www.google.com/maps/preview/place/Hudson+Woods/@41.8838397,-74.3105647,17z/data=!4m2!3m1!1s0x0:0xb071e22e4a6d3201?hl=en" target="blank">101 Ridgewood Rd, Kerhonkson, NY</a>
+    </div>
+    <div class="map-button">
+
+    </div>
+  </div>
+</div>
+</div>
+</section>
+

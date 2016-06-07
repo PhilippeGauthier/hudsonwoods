@@ -1,0 +1,53 @@
+{{ theme:partial src="nav_unsticky" }}
+<div class="secondary-nav-lots">
+	<div class="container"><a href="{{ homepage }}upgrades#upgrades-anchor"><i class="fa fa-chevron-left"></i>Back to Upgrades</a></div>
+</div>
+
+<div class="details lots">
+	<div class="container">
+	
+		<div class="details-entry">
+			<div class="row">
+
+				<div class="col-md-5 col-md-offset-1 col-md-push-6">
+					
+					<div class="specs">
+						<h2>{{ title }}</h2>
+						<h4>Specifications</h4>
+						<div class="row">
+							<div class="col-md-9">
+								<ul>
+								{{ specs }}
+									<li>{{ text }}</li>
+								{{ /specs }}
+								</ul>
+							</div>
+						</div>
+					<div class="costs">
+						<h4>Cost</h4>
+						<h4 class="last">{{ cost }}</h4>
+					</div>
+					</div>
+					
+					<a class="button" target=_blank href="{{ specDownload }}" class="download-spec"><i class="fa fa-arrow-down"></i>Download Specs</a>
+					
+				</div>
+
+				<div class="col-md-6 col-md-pull-6">
+				{{ if imageSingle|not_empty }}
+				<img src="{{ imageSingle }}" alt="">
+				{{ endif }}
+					
+				{{ if imageGallery|not_empty }}
+				<div class="fotorama"  data-nav="thumbs">
+					{{ imageGallery }}
+						<a href="{{ image }}"><img src="{{ image }}" alt=""></a>
+					{{ /imageGallery }}
+				</div>
+				{{ endif }}
+				</div>
+	
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,237 @@
+
+#location {
+	background-color: $beige;
+	border-bottom: 1px solid lighten($beige,10%);
+	h2 {
+		margin-top: 20px;
+	}
+	@include breakpoint(small) {
+		h2 {
+			margin-top: 50px;
+		}
+		.location-map {
+			display: none;
+		}
+	}
+}
+
+.location-map {
+	height: 300px;
+	width: 100%;
+	background-size: cover;
+	background-position: center center;
+}
+
+#floor-plans  {
+	.floor-plan-specs, img {
+		margin-top: 30px;
+	}
+	@include breakpoint(medium) {
+		.floor-plan-specs, img {
+			margin-top: 0;
+		}
+	}
+	.floor-plan-specs {
+		h2,h4 {
+			text-align: center;
+			margin-bottom: 30px;
+		}
+		h2 {
+			border-top: 1px solid $base-font-color;
+			padding-top: 30px;
+			margin-bottom: 10px;
+			font-size: 36px;
+			&:first-of-type {
+				border-top: none;
+				padding-top: 0;
+			}
+		}
+		h4 {
+			font-family: $base-font-family;
+			font-weight: 100;
+			font-size: 20px;
+			margin-bottom: 30px;
+		}
+	}
+}
+
+#materials {
+	.col-sm-12 {
+		margin-bottom: -20px;
+	}
+	.large-wrapper {
+		margin-bottom: 20px;
+	}
+	.small-wrapper {
+		margin-bottom: 20px;
+	}
+	h4 {
+		margin-bottom: 10px;
+	}
+	.circle-tile {
+		margin-left: 15px;
+	}
+
+	.circle-margin {
+		margin-top: 100%;
+		position: relative;
+	}
+
+
+	.circle-tile, .circle-tile-overlay {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		border-radius: 50%;
+		text-align: center;
+	}
+	.circle-tile {
+	    display: flex;
+	    align-items: center;
+	    justify-content: center;
+		max-width: 100%;
+	    span {
+	    	padding: 0 5px;
+	    	font-size: 12px;
+		    &.white {
+		    	color: white;
+		    }
+	    }
+	}
+
+	.large {
+		width: 128px;
+		.circle-tile {
+			width: 128px;
+			height: 128px;
+		}
+		@include breakpoint(small) {
+			width: 158px;
+			.circle-tile {
+				width: 158px;
+				height: 158px;
+			}
+		}
+		@include breakpoint(medium) {
+			width: 128px;
+			.circle-tile {
+				width: 128px;
+				height: 128px;
+			}
+		}
+		@include breakpoint(large) {
+			width: 158px;
+			.circle-tile {
+				width: 158px;
+				height: 158px;
+			}
+		}
+
+	}
+
+	.small {
+		width: 99px;
+		.circle-tile {
+			width: 99px;
+			height: 99px;
+		}
+		@include breakpoint(medium) {
+				width: 99px;
+				.circle-tile {
+					width: 99px;
+					height: 99px;
+				}
+			}
+		@include breakpoint(large) {
+
+		}	
+	}
+
+	h4 {
+		font-family: $base-font-family;
+		font-size: 16px;
+		font-weight: 600;
+	}
+	.black-cedar {
+		background-image: url("../img/black-cedar.jpg");
+		background-position: center center;
+		background-size: cover;
+	}
+	.natural-cedar {
+		background-image: url("../img/natural-cedar.jpg");
+		background-position: center center;
+		background-size: cover;
+	}
+	.opaque-white {
+		background-color: #dedfdf;
+	}
+	.campari-red {
+		background-color: #a90605;
+	}
+	.jade-porcelain {
+		background-color: #466346;
+	}
+	.mid-century-white {
+		background-color: #d7dee2;
+	}
+	.pomegranate {
+		background-color: #862928;
+	}
+	.jade-manganese {
+		background-color: #006600;
+	}
+	.slate-gray {
+		background-color: #828380;
+	}
+	.dark-gray {
+		background-color: #797b79;
+	}
+	.hartford-green {
+		background-color: #34524a;
+	}
+	.antique-black {
+		background-color: #5a5854;
+	}
+	.matte-black {
+		background-color: #232829;
+	}
+
+}
+
+#finishes {
+	h2 {
+		margin-bottom: 60px;
+	}
+	img, h3,li {
+		font-size: 20px;
+		margin-bottom: 20px;
+	}
+	h3 {
+		font-weight: 600;
+	}
+}
+
+#a-la-carte {
+	h2 ~ p {
+		text-align: left;
+	}
+	p {
+		font-size: 20px;
+		font-weight: 300;
+	}
+	li {
+		margin-top: 50px;
+		&.col-md-3:nth-child(4n+5) {
+			clear: both;
+		}
+		h4 {
+			font-size: 20px;
+			margin-top: 10px;
+		}
+	}
+}
+
+
+

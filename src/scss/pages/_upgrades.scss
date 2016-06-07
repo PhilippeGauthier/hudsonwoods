@@ -1,0 +1,45 @@
+
+#upgrades {
+	background-color: $lighter-gray;
+	a:hover .mask-overlay {
+		background-color: rgba(black,.2);
+	}
+	.mask-overlay {
+		@include transition(.2s);
+		background-color: rgba(black,0);
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		margin-left: 15px;
+		margin-right: 15px;
+	}
+	.masked-image {
+		background-position: center center;
+		background-size: cover;
+		height: 200px;
+	}
+	.upgrade-details {
+		background-color: #fff;
+		// padding-bottom: 30px;
+	}
+}
+
+.upgrades {
+	h3 {
+		padding-top: 20px;
+		padding-bottom: 20px;
+		@include breakpoint(small) {
+			height: 96px;
+		}
+	}
+	p {
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+}
+
+.details-entry {
+	padding-top: 10px;
+}

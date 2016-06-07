@@ -1,0 +1,58 @@
+title: lots
+
+fields:
+  title:
+    type: text
+    display: Title
+  availability:
+    type: text
+    display: Availability
+  size:
+    type: text
+    display: Size
+  home:
+    type: text
+    display: home
+  bedrooms:
+    type: text
+    display: Bedrooms
+  baths:
+    type: text
+    display: Baths
+  other:
+    type: text
+    display: Other
+  cost:
+    type: text
+    display: cost
+  content:
+    type: redactor
+    display: Description
+
+  imageSingle:
+    type: file
+    browse: false
+    display: Single Image
+    destination: assets/img/availability
+    show_thumbnail: true
+
+  imageGallery:
+    display: Image Gallery
+    type: grid
+    starting_rows: 1
+    min_rows: 1
+    fields:
+      image:
+        type: file
+        browse: false
+        display: Images
+        destination: assets/img/availability
+        show_thumbnail: true
+  floorplans:
+    type: file
+    browse: false
+    display: Floor Plans
+    destination: assets/img/availability
+    show_thumbnail: true
+
+

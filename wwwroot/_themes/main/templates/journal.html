@@ -1,0 +1,102 @@
+{{ theme:partial src="nav_unsticky" }}
+
+
+
+			{{ entries:listing folder="blog" sort_dir="desc" limit="1" }}
+				{{ if no_results }}
+					<p class="sorry">
+						No journal posts have been posted yet.<br>
+						Check back soon.
+					</p>
+				{{ else }}
+					{{ theme:partial src="journal-featured" use_context="true" }}
+				{{ endif }}
+			{{ /entries:listing }}
+
+
+
+<section>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-7">
+				<div class="blog-title-section">
+					<h4>LATEST ENTRIES</h4>
+				</div>
+			</div>
+			<div class="col-md-4 col-md-offset-1">
+				<div class="blog-title-section">
+					<h4>OTHER NEWS</h4>
+				</div>
+			</div>
+		</div>
+
+		<div class="row blog-main">
+
+			<div class="col-md-7">
+				{{ theme:partial src="journal-listings"  }}
+			</div>
+
+			<div class="col-md-4 col-md-offset-1">
+				<div class="blog-content title-region secondary">
+				<div class="tweets">
+					{{ bluebird screen_name="HudsonWoodsNY" count="5" }}
+				        {{ user }}
+				            <div class="follow">
+				                <a href="https://twitter.com/{{ screen_name }}">
+				                    <img src="{{ profile_image_url }}" alt="{{ screen_name }} on Twitter">
+				                    <span>Follow Hudson Woods on Twitter</span>
+				                </a>
+				            </div>
+				        {{ /user }}
+				        {{ tweets }}
+				            <div class="tweet">
+				                <p>{{ text }}</p>
+				                <p>
+				                    <small>
+				                        <a href="{{ tweet_url }}">{{ created_at format="g:i A, F jS, Y" }}</a>
+				                    </small>
+				                </p>
+				            </div>
+				        {{ /tweets }}
+					{{ /bluebird }}
+				</div>
+				</div>
+
+
+				<div class="blog-title-section authors">
+					<h4>BLOG AUTHORS</h4>
+				</div>
+				<div class="blog-content">
+					<div class="author-wrapper">
+						<div class="row">
+							<a href="{{ homepage }}blog/author/brittainstone">
+							<div class="col-xs-2">
+								<img src="_themes/main/img/avatars/4.thumbnail.jpg" alt="">
+							</div>
+							<div class="col-xs-10">BITTAIN STONE<span>Brittain Stone is a denizen of Manhattan and a weekender in the hamlet of Accord. He champions the Hudson Valley and is particularly fond of its plant life.</span></div></a>
+						</div>
+						<div class="row">
+							<a href="{{ homepage }}blog/author/drewlang">
+							<div class="col-xs-2">
+								<img src="_themes/main/img/avatars/5.thumbnail.jpg" alt="">
+							</div>
+							<div class="col-xs-10">DREW LANG<span>Drew Lang is the founder, architect and developer of Hudson Woods. Drew is also the principal of <a style="text-decoration: underline; font-size: 12px" href="http://langarchitecture.com">Lang Architecture.</a></span></div></a>
+						</div>
+						<div class="row">
+							<a href="{{ homepage }}blog/author/hudsonwoods">
+							<div class="col-xs-2">
+								<img src="_themes/main/img/avatars/hw.jpg" alt="">
+							</div>
+							<div class="col-xs-10">HUDSON WOODS</div></a>
+						</div>
+
+					</div>
+				</div>
+				
+
+
+			</div>
+
+		</div>
+	</div>
+</section>

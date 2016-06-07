@@ -1,0 +1,33 @@
+{{ theme:partial src="nav_unsticky" }}
+
+<section id="gallery" class="content large centered">
+	<div class="container">
+		<h2>Gallery</h2>
+		<div class="row">
+			<div class="col-md-10 col-md-offset-1">
+				<div class="gallery-nav">
+					<a href="{{ url }}?gallery=images" class="{{ if get:gallery != "videos" }}current{{ endif }}">PHOTO</a><span>|</span>
+					<a href="{{ url }}?gallery=videos" class="{{ if get:gallery == "videos" }}current{{ endif }}"> VIDEO</a>
+				</div>
+				<div class="fotorama"  data-width="100%" data-nav="thumbs">
+
+					{{ if get:gallery == "images" || get:gallery != "videos" }}
+					{{ images }}
+					<a href="{{ value }}">
+						<img src="{{ path src="{{ value }}" }}" alt="">
+					</a>	
+					{{ /images }}
+					{{ elseif get:gallery == "videos" }}
+					{{ videos }}
+					<a href="{{ link }}"data-caption="{{ caption }}"></a>
+					{{ /videos }}
+					{{ endif }}
+
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+

@@ -1,0 +1,24 @@
+fields:
+
+  content: 
+    hide: true
+
+  images:
+    display: Image
+    instructions: Upload your images and rearrange by dragging them
+    type: file
+    destination: assets/img/gallery
+
+  videos:
+    display: Video link
+    instructions: Add a video url such as 'https://vimeo.com/110384820'
+    type: grid
+    fields:
+      link:
+        type: text
+        display: Link
+      caption:
+        type: text
+        display: Video Title
+
+

@@ -1,0 +1,29 @@
+title: Culture
+
+fields:
+
+  activity:
+    display: Activity Type
+    type: text
+    default: culture
+    hide: true
+
+  image:
+    type: file
+    browse: false
+    display: Image
+    destination: assets/img/in-the-area
+    show_thumbnail: true
+
+  content:
+    type: redactor
+    display: Content
+
+  website:
+    type: grid
+    starting_rows: 1
+    min_rows: 1
+    fields:
+      link:
+        type: text
+        display: Website Link

@@ -1,0 +1,61 @@
+{{ theme:partial src="nav_unsticky" }}
+<div class="secondary-nav-lots">
+	<div class="container"><a href="{{ homepage }}availability#availability-anchor"><i class="fa fa-chevron-left"></i>Back to Map</a></div>
+</div>
+
+<div class="details lots">
+	<div class="container">
+	
+		<div class="details-entry">
+			<div class="row">
+
+				<div class="col-md-8">
+					<h2 class="title-image">{{ title }}</h2>
+					{{ if floorplans|not_empty }}
+					<img src="{{ floorplans }}" alt="">
+					{{ endif }}
+						
+				{{ if imageGallery|not_empty }}
+				<div class="fotorama"  data-nav="thumbs">
+					{{ imageGallery }}
+						<a href="{{ image }}"><img src="{{ image }}" alt=""></a>
+					{{ /imageGallery }}
+				</div>
+				{{ endif }}
+				</div>
+
+				<div class="col-md-3 col-md-offset-1">
+					<div class="specs">
+						<h2 class="title-spec">{{ title }}</h2>
+						{{ content }}
+						<ul class="no-bullet">
+							{{ if availability|not_empty }}
+							<li>Availability: <span>{{ availability }}</span></li>
+							{{ endif }}
+							{{ if size|not_empty }}
+							<li>Size: <span>{{ size }} Acres</span></li>
+							{{ endif }}
+							{{ if home|not_empty }}
+							<li>Home: <span>{{ home }}</span></li>
+							{{ endif }}
+							{{ if bedrooms|not_empty }}
+							<li>Bedrooms: <span>{{ bedrooms }}</span></li>
+							{{ endif }}
+							{{ if baths|not_empty }}
+							<li>Baths: <span>{{ baths }}</span></li>
+							{{ endif }}
+							{{ if other|not_empty }}
+							<li>Other: <span>{{ other }}</span></li>
+							{{ endif }}
+							{{ if availability != "Sold" }}
+							<li>Cost: <span>{{ cost }}</span></li>
+							{{ endif }}
+						</ul>	
+					</div>
+				</div>
+		
+			</div>
+		</div>	
+	</div>
+</div>
+<div id="lot_individual"></div>

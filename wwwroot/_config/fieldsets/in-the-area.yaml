@@ -1,0 +1,49 @@
+title: In The Area
+
+fields:
+
+  heroImages:
+    display: Hero Images and Headlines
+    type: grid
+    starting_rows: 1
+    min_rows: 1
+    fields:
+      image:
+        type: file
+        browse: false
+        display: Images
+        destination: assets/img/upgrades
+        show_thumbnail: true
+        width: 25%
+      headline:
+        type: textarea
+        display: Headline
+      subHeadline:
+        type: textarea
+        display: Sub Headline
+
+  activity:
+    display: Activity Type
+    type: select
+    options:
+      - Sleep
+      - Eat
+      - Sip
+      - Culture
+      - Swing
+      - Mind &amp; Body
+      - Swim
+      - Trails
+      - Ski
+      - Pick &amp; Grow
+
+  image:
+    type: file
+    browse: false
+    display: Image
+    destination: assets/img/in-the-area
+    show_thumbnail: true
+
+  content:
+    type: redactor
+    display: Content

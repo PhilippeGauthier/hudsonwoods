@@ -1,0 +1,59 @@
+title: homepage
+
+fields:
+
+  heroImages:
+    display: Hero Images and Headlines
+    type: grid
+    starting_rows: 1
+    min_rows: 1
+    fields:
+      image:
+        type: file
+        browse: false
+        display: Images
+        destination: assets/img/landing
+        show_thumbnail: true
+        width: 25%
+      headline:
+        type: textarea
+        display: Headline
+      subHeadline:
+        type: textarea
+        display: Sub Headline
+      link:
+        type: textarea
+        display: Linked Page
+
+  landingHeadline:
+    type: text
+    display: Landing Page Sub Headline
+  landingParagraph:
+    type: textarea
+    display: Landing Page Sub Paragraph
+
+  landingTiles:
+    display: Landing Tiles
+    type: grid
+    starting_rows: 1
+    min_rows: 1
+    fields:
+      image:
+        type: file
+        browse: false
+        display: Images
+        destination: assets/img/landing
+        show_thumbnail: true
+        width: 25%
+      tileHeadline:
+        type: text
+        display: Tile Headline
+      description:
+        type: textarea
+        display: Tile Description
+      linkTitle:
+        type: text
+        display: Link Title
+      linkAddress:
+        type: text
+        display: Link Address

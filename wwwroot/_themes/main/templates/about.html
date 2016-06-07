@@ -1,0 +1,122 @@
+<section id="header-about" class="hero-header">
+    {{ theme:partial src="nav" }}
+
+    <div class="slick-carousel" >
+        {{ heroImages }}
+
+        <div class="hero" style="background-image: url( {{ image }} );">
+          <div class="container scrollme">
+            <div class="animateme" data-when="exit" data-from="0" data-to="0.55" data-opacity="0" data-translatey="100" style="opacity: 1; -webkit-transform: translate3d(0px, 100px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(1);">
+                <h1>{{ headline }}</h1>
+                {{ if subHeadline|not_empty }}
+                <h3>{{ subHeadline }}</h3>
+                {{ endif }}
+            </div>
+
+        </div>
+    </div>
+
+        {{ /heroImages }}
+    </div>
+
+    {{ theme:partial src="nav_about" }}
+</section>
+
+<section id="story" class="content large">
+<a href="" class="anchor large" id="story-anchor"></a>
+    <div class="container">
+<div class="row">
+    <div class="col-md-6 col-md-offset-3">
+        <p>Set amidst forests and meadows with sweeping mountain views, Hudson Woods homes offer modern design that blends seamlessly with the natural surroundings. More than a place, Hudson Woods is an experience that opens doors to discovering the things that matter. Family. Friends. Sport. Craft. Hudson Woods lets you access it all.
+        </p>         
+    </div>
+    <div class="col-md-8 col-md-offset-2 wrapper-center">
+        <h2>“To Create Authentic, Meaningful Experiences At Every Turn”</h2>
+        <a target=_blank href="http://langarchitecture.com">Drew Lang, Lang Architecture</a>            
+    </div>
+    <div class="col-md-6 col-md-offset-3">
+        <p>At Lang Architecture, that’s our mission. It is the driving force behind every decision we make. Through design, craft and sustainability, Hudson Woods offers just the right elements at just the right time. The site, the homes, the access, the aesthetic. Everything comes together to create a rich, unique experience and incredible value for buyers today.</p>         
+    </div>
+</div>
+    </div>
+</section>
+
+<section id="partners">
+<a href="" class="anchor hero-anchor" id="partners-anchor"></a>
+    <div class="partner hero hero-intro" style="background-image: url( {{ partnerHero }} );">
+        <div class="container scrollme">
+            <h1>Team</h1>
+        </div>
+    </div>
+
+    <div id="partner-list" class="content-tiles beige">
+        <div class="container">
+            <div class="row tile-wrapper-large">
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="row">
+                        {{ partnerItems }}
+                            <div class="col-xs-12 col-sm-6 partner-tile">
+                            <a target=_blank href="{{ webAddress }}">
+                                
+                                    <div class="circle">
+                                        
+                                        <div class="circle-tile-overlay"></div>
+                                        <div class="circle-tile" style="background-image: url( {{ image }} );"></div>
+                                    </div>
+                               
+                                <h3>{{ headline }}</h3>
+                                <h3>{{ subHeadline }}</h3>
+                            </a>
+                            <p>{{ description }}</p>
+                            </div>
+                        {{ /partnerItems}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="makers" class="beige">
+    <a href="" class="anchor hero-anchor" id="makers-anchor"></a>
+    <div class="maker hero hero-intro" style="background-image: url( {{ makerHero }} );">
+        <div class="container scrollme">
+            <div class="row">
+                <h1>Makers</h1>
+            </div>
+        </div>
+    </div>
+
+    <div id="makers-list" class="content-tiles centered">
+        <div class="container">
+            <div class="row tile-wrapper-large">
+                {{ entries:listing folder="about/makers" sort_dir="asc" }}
+                <div class="col-xs-12 col-sm-6 col-lg-4 tile">
+                    <div class="makers-tiles">
+                        <a class="slide" target=_blank href="{{ link }}">
+                            <img class="slide-away" src="{{ image }}" alt="{{ title }}">
+                            <span class="slide-in">
+                                <img src="{{ logo }}" alt="">
+                            </span>
+                        </a>
+        
+                        <div class="slide-caption">
+                            <h3><a href="{{ link }}">{{ makerTitle }}</a></h3>
+                            <p class="slide-description">{{ makerTagline }}</p>
+                        </div>
+        
+                    </div>
+                </div>
+                {{ /entries:listing }}
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="progress" class="centered large beige">
+    <a href="" class="anchor" id="progress-anchor"></a>
+    <h1>Progress</h1>
+    <div id="instafeed"></div>
+</section>
+
+

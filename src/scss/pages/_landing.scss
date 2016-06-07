@@ -1,0 +1,71 @@
+#header-landing {
+  margin-bottom: 0;
+  h1 {
+    @include breakpoint (small) {
+      font-size: 80px;
+    }
+  }
+  h3 {
+    font-family: $base-font-family;
+  }
+  span {
+    padding-left: 10px;
+    color: rgba($yellow,.6);
+  }
+  
+  .slick-carousel {
+    position: relative;
+  }
+}
+
+#header-landing .slick-slider {
+    margin-bottom: 0;
+}
+
+#landing-tiles .tile {
+  img {
+    height: 200px;
+  }
+}
+
+/* Dots */
+
+
+.slick-slider {
+    margin-bottom: 0;
+}
+.slick-dots {
+    bottom: 45px;
+    li {
+        margin: 0px 10px;
+        button {
+            &:before {
+                font-size: 16px;
+                color: white;
+                opacity: 0.75;
+            }
+        }
+        &.slick-active {
+          margin: 0 12px;
+          height: 14px;
+          width: 14px;
+        }
+        &.slick-active button {
+          width: 14px;
+          height: 14px;
+          padding-bottom: 3px;
+          &:before {
+            border: 1px solid white;
+            border-radius: 50%;
+            color: transparent;
+            opacity: .85;
+            padding: 5px;
+            font-size: 12px;
+            height: 14px;
+            width: 14px;
+          }
+        }
+    }
+}
+
+

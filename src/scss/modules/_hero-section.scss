@@ -1,0 +1,108 @@
+.hero-header, .hero-intro {
+  h1,h2,h3,h4,a,span,p {
+    color: white;
+  }
+  text-align: center;
+  &.landing {
+    h1 {
+      font-size: 36px;
+    }
+    text-align: left;
+  }
+}
+
+#header-availability {
+  position: relative;
+  #arrow {
+    display: none;
+    position: absolute;
+    bottom: 60px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    border: 1px solid white;
+    background-color: rgba(white,.2);
+    transition: all .25s;
+    &:hover {
+      background-color: rgba(white,.3);
+    }
+    .icon {
+      width: 0px;
+      height: 0px;
+      margin-top: 15px;
+      border-left: 13px solid transparent;
+      border-right: 13px solid transparent;
+      border-top: 17px solid white;
+    }
+    @include breakpoint(medium) {
+      display: block;
+    }
+  }
+}
+
+.hero {
+  background-position: center;
+  background-size: cover;
+  height: 400px;
+  .scrollme {
+    h1 {
+      margin-top: 180px;
+    }
+    &.landing {
+
+      h1,h3 {
+        text-align: left;
+      }
+      h1 {
+        margin-top: 150px;
+        font-size: 38px;
+        text-align: center;
+      }
+    }
+  }
+  &.hero-intro {
+    height: 300px;
+  }
+  .slick-slide {
+    margin-bottom: 0;
+  }
+  @include breakpoint(small) {
+    height: 700px;
+    .scrollme {
+      h1 {
+        margin-top: 320px;
+      }  
+      &.landing h1 {
+        margin-top: 270px;
+      } 
+    }
+    &.hero-intro {
+      height: 500px;
+      .scrollme h1{
+          margin-top: 195px;
+        }
+    }
+  }
+}
+
+// .container.scrollme {
+//   h1 {
+//     margin-top: 320px;
+//   }
+//   &.landing {
+//     h1 {
+//       margin-top: 150px;
+//     }
+//     h1,h3 {
+//       text-align: left;
+//     }
+//   }
+//   @include breakpoint(small) {
+//     h1 {
+//       margin-top: 320px;
+//     }    
+//   }
+// }

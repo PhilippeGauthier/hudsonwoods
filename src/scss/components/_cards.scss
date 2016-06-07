@@ -1,0 +1,260 @@
+
+.card {
+	h2 {
+		margin: 20px 0 10px;
+	}
+	padding: 10px 20px 20px;
+	background-color: #fff;
+	h2 {
+		font-size: 34px;
+		padding-top: 20px;
+		font-weight: 300;
+	}
+	img {
+		margin-bottom: 5px;
+	}
+	&.availability {
+		height: 606px;
+		border-top: 8px solid $dark-gray;
+		p {
+			font-size: 15px;
+		}
+		.info {
+			padding: 40px 0;
+			&:last-of-type {
+				margin-right: 0;
+			}
+		}
+		h2 {
+			padding-top: 0;
+		}
+		.leaflet-popup {
+			z-index: 101;
+		}
+		.leaflet-popup .col-md-4 {
+			padding-left: 0;
+		}
+		.info-links {
+			display: block;
+		}
+		.link {
+			width: 49%;
+			display: inline-block;
+			padding-bottom: 10px;
+			&:last-of-type {
+				margin-right: 0;
+			}
+			i {
+				margin-right: 10px;
+			}
+			a {
+				font-weight: 600;
+			}
+		}
+
+		.status {
+			display: inline-block;
+			color: white;
+			padding: 0 10px;
+			text-transform: uppercase;
+			font-size: 14px;
+		}
+		&.not-released {
+			border-top: 8px solid #e7e4de;
+			.status {
+				background-color: #e7e4de;
+			}
+		}
+		&.sold {
+			border-top: 8px solid #a1b49c;
+			.status {
+				background-color: #a1b49c;
+			}
+		}
+		&.contract-out {
+			border-top: 8px solid #d1dfb9;
+			.status {
+				background-color: #d1dfb9;
+			}
+		}
+		&.contract-signed {
+			border-top: 8px solid #accf9c;
+			.status {
+				background-color: #accf9c;
+			}
+		}
+		&.for-sale {
+			border-top: 8px solid #F2E68C;
+			.status {
+				background-color: #F2E68C;
+			}
+		}
+	}
+}
+
+.card.area {
+	h2 {
+		margin-top: 0;
+	}
+	h4 img {
+		min-width: 0;
+		margin-right: 10px;
+		height: 20px;
+	}
+	a {
+		font-weight: 500;
+	}
+	overflow: hidden;
+	h4 {
+		padding-top: 20px;
+		text-transform: uppercase;
+		.sleep:before {
+			content: url("../../../assets/img/in-the-area/icons/card-icon-sleep.png");
+			margin-right: 10px;
+		}
+		.eat:before {
+			content: url("../../../assets/img/in-the-area/icons/card-icon-eat.png");
+			margin-right: 10px;
+		}
+		.sip:before {
+			content: url("../../../assets/img/in-the-area/icons/card-icon-sip.png");
+			margin-right: 10px;
+		}
+		.culture:before {
+			content: url("../../../assets/img/in-the-area/icons/card-icon-culture.png");
+			margin-right: 10px;
+		}
+		.swing:before {
+			content: url("../../../assets/img/in-the-area/icons/card-icon-swing.png");
+			margin-right: 10px;
+		}
+		.mind-and-body:before {
+			content: url("../../../assets/img/in-the-area/icons/card-icon-mind-body.png");
+			margin-right: 10px;
+		}
+		.swim:before {
+			content: url("../../../assets/img/in-the-area/icons/card-icon-swim.png");
+			margin-right: 10px;
+		}
+		.swim:before {
+			content: url("../../../assets/img/in-the-area/icons/card-icon-swim.png");
+			margin-right: 10px;
+		}
+		.trails:before {
+			content: url("../../../assets/img/in-the-area/icons/card-icon-trail.png");
+			margin-right: 10px;
+		}
+		.ski:before {
+			content: url("../../../assets/img/in-the-area/icons/card-icon-ski.png");
+			margin-right: 10px;
+		}
+		.pick-and-grow:before {
+			content: url("../../../assets/img/in-the-area/icons/card-icon-pick-grow.png");
+			margin-right: 10px;
+		}
+	}
+	img {
+		// min-width: 100%;
+		max-width: 100% !important;
+		height: 200px;
+	}
+	&.sleep {
+		border-top: 8px solid $sleep;
+	}
+	&.eat {
+		border-top: 8px solid $eat;
+	}
+	&.sip {
+		border-top: 8px solid $sip;
+	}
+	&.culture {
+		border-top: 8px solid $culture;
+	}
+	&.swing {
+		border-top: 8px solid $swing;
+	}
+	&.mind-and-body {
+		border-top: 8px solid $mind-and-body;
+	}
+	&.swim {
+		border-top: 8px solid $swim;
+	}
+	&.trails {
+		border-top: 8px solid $trails;
+	}
+	&.ski {
+		border-top: 8px solid $ski;
+	}
+	&.pick-and-grow {
+		border-top: 8px solid $pick-and-grow;
+	}
+	&.hudson-woods {
+		border-top: 8px solid $yellow;
+	}
+}
+
+.card.area.mobile {
+	background-color: lighten($lighter-beige,5%);
+	margin-bottom: 30px;
+	overflow: hidden;
+	p {
+		margin: 18px 0 0;
+	}
+	img {
+		height: auto;
+		width: 100%;
+	}
+}
+
+.leaflet-popup-content-wrapper {
+	padding: 0;
+	text-align: left;
+	border-radius: 0px;
+}
+
+.leaflet-popup,.leaflet-popup-pane {
+	z-index: 9999;
+}
+
+.leaflet-popup-content {
+	margin: 0;
+	line-height: 1.4;
+	width: 390px !important;
+}
+
+.leaflet-container a {
+	color: $base-font-color;
+	&:hover {
+		color: darken($base-font-color,10%);
+	}
+}
+
+.leaflet-container a.leaflet-popup-close-button {
+	top: 16px;
+	right: 7px;
+	color: $base-font-color;
+	&:hover {
+		color: $base-font-color;
+	}
+}
+
+.leaflet-container .leaflet-control-attribution, .leaflet-container .leaflet-control-scale {}
+
+.leaflet-label {
+	border: none;
+	background-color:transparent;
+	color: #676566;
+	// text-shadow: 1px 1px 0px rgba(255,255,255,.8);
+	text-transform: uppercase;
+	font-weight: 600;
+	font-size: 10px;
+	&:before {
+		border: none;
+	}
+}
+
+.leaflet-popup-pane {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
