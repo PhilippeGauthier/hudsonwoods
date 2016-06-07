@@ -8,7 +8,7 @@ var map = L.map('map', {
     // doubleClickZoom: false
 });
 
-L.tileLayer('http://a.tiles.mapbox.com/v3/sandersonj.i245n6m6/{z}/{x}/{y}.png', {
+L.tileLayer('https://a.tiles.mapbox.com/v3/sandersonj.i245n6m6/{z}/{x}/{y}.png', {
     id: 'sandersonj.i245n6m6'
 }).addTo(map);
 
@@ -126,7 +126,7 @@ function onEachFeaturesold(feature, layer) {
             "<p>" + feature.properties.lotSize+"</p>" +
         "</div>" + 
         "<div class='row" + "'" + ">" + "</div>" +
-        "<a href=" + "http://hudsonwoods.com/availability/sold/" + feature.properties.lotURL + ">" + 
+        "<a href=" + "https://hudsonwoods.com/availability/sold/" + feature.properties.lotURL + ">" + 
         "<i class='fa fa-search" + "'" +">" + "</i>" +
         "View Floor Plans" + 
         "</a>" +
@@ -142,6 +142,7 @@ function onEachFeaturesold(feature, layer) {
     });
 }
 
+geojson = L.geoJson(sold, {
     style: soldMap,
     onEachFeature: onEachFeaturesold,
     pointToLayer: function (feature, latlng) {
@@ -218,7 +219,7 @@ function onEachFeatureforSale(feature, layer) {
             "<p>"+feature.properties.cost+"</p>" +
         "</div>" + 
         "<div class='row" + "'" + ">" + "</div>" +
-        "<a href=" + "http://hudsonwoods.com/availability/for-sale/" + feature.properties.lotURL + ">" + 
+        "<a href=" + "https://hudsonwoods.com/availability/for-sale/" + feature.properties.lotURL + ">" + 
         "<i class='fa fa-search" + "'" +">" + "</i>" +
         "View Floor Plans" + 
         "</a>" +
@@ -311,7 +312,7 @@ function onEachFeaturecontractOut(feature, layer) {
             "<p>"+feature.properties.cost+"</p>" +
         "</div>" + 
         "<div class='row" + "'" + ">" + "</div>" +
-        "<a href=" + "http://hudsonwoods.com/availability/contract-out/" + feature.properties.lotURL + ">" + 
+        "<a href=" + "https://hudsonwoods.com/availability/contract-out/" + feature.properties.lotURL + ">" + 
         "<i class='fa fa-search" + "'" +">" + "</i>" +
         "View Floor Plans" + 
         "</a>" +
@@ -404,7 +405,7 @@ function onEachFeaturecontractSigned(feature, layer) {
             "<p>"+feature.properties.cost+"</p>" +
         "</div>" + 
         "<div class='row" + "'" + ">" + "</div>" +
-        "<a href=" + "http://hudsonwoods.com/availability/contract-signed/" + feature.properties.lotURL + ">" + 
+        "<a href=" + "https://hudsonwoods.com/availability/contract-signed/" + feature.properties.lotURL + ">" + 
         "<i class='fa fa-search" + "'" +">" + "</i>" +
         "View Floor Plans" + 
         "</a>" +
@@ -497,7 +498,7 @@ function onEachFeaturenotReleased(feature, layer) {
             "<p>"+feature.properties.cost+"</p>" +
         "</div>" + 
         "<div class='row" + "'" + ">" + "</div>" +
-        "<a href=" + "http://hudsonwoods.com/availability/not-released/" + feature.properties.lotURL + ">" + 
+        "<a href=" + "https://hudsonwoods.com/availability/not-released/" + feature.properties.lotURL + ">" + 
         "<i class='fa fa-search" + "'" +">" + "</i>" +
         "View Floor Plans" + 
         "</a>" +

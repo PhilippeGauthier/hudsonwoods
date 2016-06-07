@@ -20,13 +20,13 @@ gulp.task('default', function() {
 });
 
 var path = {
-  DEST: 'statamic/_themes/main/',
+  DEST: 'wwwroot/_themes/main/',
 	SCSS: './src/scss/',
 	SCSS_ENTRY: './src/scss/main.scss',
 	CSS_SRC: './src/css',
 	HTML_SRC: './src/html/**/*.html',
   JS_SRC_DIST: './src/dist/',
-  JS_OUT: 'statamic/_themes/main/js/',
+  JS_OUT: 'wwwroot/_themes/main/js/',
   JS_MIN: 'scripts.min.js',
   JS: ['./src/js/third_party/*.js','./src/js/Availability.js','./src/js/InTheArea.js','./src/js/App.js']
 }
@@ -72,11 +72,10 @@ gulp.task('replaceHTML', function(){
     .pipe(gulp.dest(path.DEST + 'layouts'));
 });
 
-gulp.task('scripts', function(cb) {
+gulp.task('scripts', function() {
   return gulp.src(path.JS)
     .pipe(concat('scripts.js'))
-    .pipe(gulp.dest(path.JS_SRC_DIST))
-    cb(err);
+    .pipe(gulp.dest(path.JS_SRC_DIST));
 });
 
 gulp.task('copyJS', ['scripts'], function(){
@@ -84,12 +83,13 @@ gulp.task('copyJS', ['scripts'], function(){
     .pipe(gulp.dest(path.JS_OUT));
 });
 
-gulp.task('compress', ['scripts'], function() {
-  return gulp.src([path.JS_SRC_DIST + 'scripts.js'])
-    .pipe(uglify())
+gulp.task('compress', function() {
+  return gulp.src('./src/dist/scripts.js')
+    .pipe(uglify().on('error', gutil.log))
     .pipe(rename('scripts.min.js'))
-    .pipe(gulp.dest(path.JS_OUT));
+    .pipe(gulp.dest(path.JS_OUT).on('error', gutil.log));
 });
+
 
 gulp.task('watch', function() {
   livereload.listen();
