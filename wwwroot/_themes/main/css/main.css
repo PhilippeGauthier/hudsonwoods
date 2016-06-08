@@ -7269,12 +7269,7 @@ html, body {
 
 #footer, .body-wrapper:after {
   /* .push must be the same height as footer */
-  height: 90px;
-  /* Landscape phone to portrait tablet */ }
-
-@media (min-width: 767px) {
-  #footer, .body-wrapper:after {
-    height: 130px; } }
+  height: 130px; }
 
 .beige {
   background-color: #ebe9e2; }

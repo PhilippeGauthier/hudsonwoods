@@ -41,10 +41,7 @@ html, body {
 }
 #footer, .body-wrapper:after {
   /* .push must be the same height as footer */
-  height: 90px; 
-  @include breakpoint(small) {
-    height: 130px
-  }
+  height: 130px;
 }
 
 .beige {
