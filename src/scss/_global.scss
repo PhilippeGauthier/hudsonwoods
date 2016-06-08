@@ -23,25 +23,30 @@ html, body, a, span, p {
   font-family: $base-font-family;
 }
 
-html, body {
+html {
   height: 100%;
 }
 
-.body-wrapper {
+body {
   min-height: 100%;
-  margin-bottom: -90px;
-  @include breakpoint(small) {
-    margin-bottom: -130px;
-  }
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  position: relative;
 }
 
-.body-wrapper:after {
-  content: "";
-  display: block;
+img {
+  max-width: 100%;
 }
-#footer, .body-wrapper:after {
-  /* .push must be the same height as footer */
-  height: 130px;
+
+.page-wrap {
+  flex: 1;
+  display: flex;
+  min-height: 100%;
+  flex-direction: column;
+  clear: both;
+  position: relative;
+  // padding-bottom: 60px;
 }
 
 .beige {

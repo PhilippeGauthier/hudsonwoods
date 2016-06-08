@@ -3,7 +3,6 @@ var sass = require('gulp-sass');
 var source = require('vinyl-source-stream');
 var sourcemaps = require("gulp-sourcemaps");
 var concat = require('gulp-concat');
-var copy = require('gulp-copy');
 var autoprefixer = require('gulp-autoprefixer');
 var minifyCss = require('gulp-minify-css');
 var rename = require("gulp-rename");
@@ -24,16 +23,17 @@ var path = {
 	SCSS: './src/scss/',
 	SCSS_ENTRY: './src/scss/main.scss',
 	CSS_SRC: './src/css',
-	HTML_SRC: './src/html/**/*.html',
+  HTML: 'wwwroot/_themes/main/',
+	HTML_SRC: 'src/html/',
   JS_SRC_DIST: './src/dist/',
   JS_OUT: 'wwwroot/_themes/main/js/',
   JS_MIN: 'scripts.min.js',
   JS: ['./src/js/third_party/*.js','./src/js/Availability.js','./src/js/InTheArea.js','./src/js/App.js']
 }
 
-gulp.task('copyHTML', function(){
-  gulp.src(path.HTML_SRC)
-    .pipe(gulp.dest(path.DEST + 'layouts'));
+gulp.task('copy', function(){
+  gulp.src('src/html/default.html')
+    .pipe(gulp.dest(path.HTML + 'layouts'));
 });
 
 
@@ -62,7 +62,7 @@ gulp.task('replaceHTML', function(){
     .pipe(htmlreplace({
       'js': {
         src: null,
-        tpl: '<script src="{{ theme:js src="main.min.js" }}"></script>'
+        tpl: '<script src="{{ theme:js src="scripts.min.js" }}"></script>'
       },
       'css': {
         src: null,
@@ -93,7 +93,6 @@ gulp.task('compress', function() {
 
 gulp.task('watch', function() {
   livereload.listen();
-  gulp.watch(path.HTML, ['copy']);
   gulp.watch(path.SCSS + '**/*.scss', ['sass']);
   gulp.watch(path.JS, ['compress']);
   gulp.watch([path.DEST + '/**/*.*'], reload_page);
@@ -106,5 +105,5 @@ gulp.task('watchProduction', function() {
 
 gulp.task('production', ['replaceHTML', 'minify-css', 'compress' ]);
 
-gulp.task('default', ['watch']);
+gulp.task('default', ['copy','watch']);
 

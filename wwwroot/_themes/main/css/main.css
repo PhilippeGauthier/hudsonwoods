@@ -6210,11 +6210,6 @@ button.close {
 .slick-dots li.slick-active button:before {
   opacity: 0.75; }
 
-/* Needed for the lightbox */
-html, body {
-  height: 100%;
-  width: 100%; }
-
 /* Element wrapper */
 .sp-wrap {
   display: none;
@@ -7251,25 +7246,36 @@ html, body, a, span, p {
   color: #6e736c;
   font-family: "proxima-nova", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
 
-html, body {
+html {
   height: 100%; }
 
-.body-wrapper {
+body {
   min-height: 100%;
-  margin-bottom: -90px;
-  /* Landscape phone to portrait tablet */ }
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin: 0;
+  position: relative; }
 
-@media (min-width: 767px) {
-  .body-wrapper {
-    margin-bottom: -130px; } }
+img {
+  max-width: 100%; }
 
-.body-wrapper:after {
-  content: "";
-  display: block; }
-
-#footer, .body-wrapper:after {
-  /* .push must be the same height as footer */
-  height: 130px; }
+.page-wrap {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100%;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  clear: both;
+  position: relative; }
 
 .beige {
   background-color: #ebe9e2; }
@@ -7924,7 +7930,7 @@ nav.navbar .navbar-brand {
   background-color: #c9be69;
   text-align: center;
   padding: 15px 0;
-  /* Landscape phone to portrait tablet */ }
+  /* Portrait tablet to landscape and desktop */ }
 
 #footer a {
   font-size: 14px;
@@ -7975,12 +7981,12 @@ nav.navbar .navbar-brand {
   border: 1px solid #fff;
   margin: 0 10px;
   vertical-align: middle;
-  /* Landscape phone to portrait tablet */ }
+  /* Portrait tablet to landscape and desktop */ }
 
 #footer .social a .fa-lg {
   line-height: 2; }
 
-@media (min-width: 767px) {
+@media (min-width: 992px) {
   #footer .social a {
     line-height: 1.1; } }
 
@@ -7997,7 +8003,7 @@ nav.navbar .navbar-brand {
   vertical-align: middle;
   font-size: 12px; }
 
-@media (min-width: 767px) {
+@media (min-width: 992px) {
   #footer {
     padding: 40px 0;
     text-align: left; }

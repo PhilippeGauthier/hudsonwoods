@@ -64,7 +64,7 @@
 		    .fa-lg {
 		    	line-height: 2;
 		    }
-		    @include breakpoint(small) {
+		    @include breakpoint(medium) {
 		    	line-height: 1.1;
 		    }
 			&:hover, &:active {
@@ -82,7 +82,7 @@
 		
 
 	}
-	@include breakpoint(small) {
+	@include breakpoint(medium) {
 		padding: 40px 0;
 		text-align: left;
 		.social {
