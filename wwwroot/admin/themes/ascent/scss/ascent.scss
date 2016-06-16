@@ -44,6 +44,7 @@ $linkActiveColor: $orange;
 @import 'file';
 @import 'revisions';
 @import 'metrics';
+@import 'pagination';
 @import 'third-party';
   @import 'vendor/picker/default';
   @import 'vendor/picker/default.date';
@@ -1784,12 +1785,12 @@ code textarea {
   overflow: hidden;
 
   .map {
-    -webkit-transition: height;
-    -moz-transition: height;
-    transition: height;
-    -webkit-transition: width;
-    -moz-transition: width;
-    transition: width;
+    -webkit-transition-property: height;
+    -moz-transition-property: height;
+    transition-property: height;
+    -webkit-transition-property: width;
+    -moz-transition-property: width;
+    transition-property: width;
     -webkit-transition: 0.35s ease;
     -moz-transition: 0.35s ease;
     transition: 0.35s ease;

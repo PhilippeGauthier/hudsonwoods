@@ -25,6 +25,9 @@ fields:
   cost:
     type: text
     display: cost
+  hide_cost:
+    type: checkbox
+    display: Hide Cost on Availability Map
   content:
     type: redactor
     display: Description
