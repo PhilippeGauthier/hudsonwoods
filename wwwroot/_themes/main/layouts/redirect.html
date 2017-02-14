@@ -25,6 +25,21 @@
 <script>try{Typekit.load({ async: true });}catch(e){}</script>
 
 {{ theme:css src="components.min" tag="true" }}
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1832634483660033'); // Insert your pixel ID here.
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1832634483660033&ev=PageView&noscript=1"
+/></noscript>
+<!-- DO NOT MODIFY -->
+<!-- End Facebook Pixel Code -->
 <link rel="shortcut icon" type="image/png" href="{{ theme:img src="favicon.ico" }}">
 
   <title>
@@ -37,7 +52,13 @@
 </head>
 
  <body class="beige" data-spy="scroll" data-target="#secondary-nav-list">
-
+ 
+  <script>
+  fbq('track', 'Lead', {
+  value: 10.00,
+  currency: 'USD'
+  });
+  </script>
   <div class="body-wrapper">{{ layout_content }}</div>
 
   {{ theme:partial src="footer" }}
