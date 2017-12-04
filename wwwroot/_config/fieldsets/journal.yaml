@@ -34,6 +34,23 @@ fields:
     type: text
     display: Use video embed code here for full width videos - will appear at top of post
 
+  buttons:
+    type: grid
+    display: Add Buttons to Blog Content
+    fields:
+      button_text:
+        type: text
+        display: Button Text
+      button_url:
+        type: text
+        display: Button URL if no Download
+      button_file:
+        type: file
+        browse: false
+        display: Button File
+        destination: assets/img/journal
+        show_thumbnail: true
+
   content:
     display: Blog Entry
     type: redactor

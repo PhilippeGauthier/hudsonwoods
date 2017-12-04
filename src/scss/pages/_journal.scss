@@ -111,6 +111,20 @@
 }
 
 .blog-content {
+	.blog-button {
+		margin-top: 24px;
+		display: inline-block;
+		background-color: $dark-gray;
+		color: white;
+		padding: 10px 40px;
+		text-decoration: none;
+		transition: all .25s;
+		&:hover {
+			background-color: lighten($dark-gray, 5%);
+			color: white;
+		}
+
+	}
 	&.summary {
 		border-bottom: 1px solid darken($lighter-gray, 20%);
 		padding-bottom: 40px;
