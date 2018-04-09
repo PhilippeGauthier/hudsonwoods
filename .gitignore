@@ -15,6 +15,7 @@ wwwroot/_cache
 wwwroot/_logs
 wwwroot/!_logs/index.html
 wwwroot/assets/
+wwwroot/assets.zip
 wwwroot/_content/
 wwwroot/_config/users/
 wwwroot/_forms/
