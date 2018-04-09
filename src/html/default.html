@@ -90,6 +90,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   });
   </script>
   {{ /if }}
+  {{ theme:partial src="license-popup" }}
   <div class="page-wrap">{{ layout_content }}</div>
 
   {{ theme:partial src="footer" }}
@@ -126,7 +127,18 @@ var google_remarketing_only = true;
 <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/962001921/?value=0&amp;guid=ON&amp;script=0"/>
 </div>
 </noscript>
-
+<script>
+  function setCookie() {
+    Cookies.set('name', 'garfield');
+  };
+  $('.close-button').click(function() {
+    setCookie();
+    console.log('clicked');
+  });
+if(Cookies.get('name') === "garfield") {
+  $('#email-popup').css('display', 'none');
+}
+</script>
 </body>
 </html>
 

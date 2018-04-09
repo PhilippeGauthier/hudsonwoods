@@ -74,19 +74,19 @@ gulp.task('replaceHTML', function(){
 
 gulp.task('scripts', function() {
   return gulp.src(path.JS)
-    .pipe(concat('scripts.js'))
+    .pipe(concat('main.js'))
     .pipe(gulp.dest(path.JS_SRC_DIST));
 });
 
 gulp.task('copyJS', ['scripts'], function(){
-  gulp.src(path.JS_SRC_DIST + 'scripts.js')
+  gulp.src(path.JS_SRC_DIST + 'main.js')
     .pipe(gulp.dest(path.JS_OUT));
 });
 
 gulp.task('compress', function() {
-  return gulp.src('./src/dist/scripts.js')
+  return gulp.src('./src/dist/main.js')
     .pipe(uglify().on('error', gutil.log))
-    .pipe(rename('scripts.min.js'))
+    .pipe(rename('main.min.js'))
     .pipe(gulp.dest(path.JS_OUT).on('error', gutil.log));
 });
 
@@ -94,7 +94,8 @@ gulp.task('compress', function() {
 gulp.task('watch', function() {
   livereload.listen();
   gulp.watch(path.SCSS + '**/*.scss', ['sass']);
-  gulp.watch(path.JS, ['compress']);
+  gulp.watch(path.JS, ['copyJS']);
+  gulp.watch([path.HTML_SRC + '/*.*'], ['copy']);
   gulp.watch([path.DEST + '/**/*.*'], reload_page);
 });
 

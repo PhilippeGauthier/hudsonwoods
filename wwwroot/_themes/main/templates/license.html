@@ -1,0 +1,271 @@
+<div class="license">
+    <section id="header-license" class="hero-header">
+        {{ theme:partial src="nav" }}
+        
+        <div class="slick-carousel" >
+            {{ heroImages }}
+            
+            <div class="hero" style="background-image: url( {{ image }} );">
+                <div class="container scrollme">
+                    <div class="animateme" data-when="exit" data-from="0" data-to="0.55" data-opacity="0" data-translatey="100" style="opacity: 1; -webkit-transform: translate3d(0px, 100px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(1);">
+                        <h1>{{ headline }}</h1>
+                        {{ if subHeadline|not_empty }}
+                        <h3>{{ subHeadline }}</h3>
+                        {{ endif }}
+                    </div>
+                    
+                </div>
+            </div>
+            
+            {{ /heroImages }}
+        </div>
+        
+    </section>
+    <section class="content large beige">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <p style="text-align: center" class="large">{{ license_intro }}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="content large centered">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <h2>{{ what_header }}</h2>
+                    <p class="sub-header centered">{{ what_explainer }}</p>
+                </div>
+            </div>
+            <div class="row isolate">
+                {{ what_grid }}
+                <div class="col-md-3 checklist">
+                    <h3>{{ title }}</h3>
+                    <p>{{ descriptor }}</p>
+                </div>
+                {{ /what_grid }}
+            </div>
+        </div>
+    </section>
+    <section class="content large beige centered">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <h2>{{ how_header }}</h2>
+                    <p class="sub-header centered">{{ how_explainer }}</p>
+                </div>
+            </div>
+            <div class="row isolate">
+                <div class="how-container">
+                    {{ how_grid }}
+                    <div class="how-wrapper">
+                        <img src="{{ icon }}" alt="">
+                        <h3>{{ title }}</h3>
+                        <p>{{ descriptor }}</p>
+                    </div>
+                    {{ /how_grid }}
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="content large centered">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <h2>{{ investment_header }}</h2>
+                    <p class="sub-header centered">{{ investment_explainer }}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="content large top-only lighter-gray centered">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <h2>{{ license_header }}</h2>
+                </div>
+            </div>
+            <div class="row isolate">
+                <div class="how-container">
+                    {{ license_grid }}
+                    <div class="col-md-4">
+                        <div class="license-wrapper">
+                            <div class="top">
+                                <h3>{{ title }}</h3>
+                                <p>{{ descriptor }}</p>
+                            </div>
+                            <div class="price">{{ price }}</div>
+                            
+                        </div>
+                    </div>
+                    {{ /license_grid }}
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="content lighter-gray centered">
+        <div class="container">
+            <div class="row mt-1 justify-content-center">
+                <div class="col-md-12 text-center">
+                    <p style="margin-bottom: 60px;">{{ license_intro }}</p>
+                </div>
+            </div>
+            <div class="row mt-1 justify-content-center">
+                <div class="col-md-6 col-md-offset-3">
+                    
+                    
+                    <form action="">
+                        <div class="inquire">
+                            {{ if errors }}
+                            <div class="alert alert-danger">
+                                {{ errors }}
+                                {{ value }}<br>
+                                {{ /errors }}
+                            </div>
+                            {{ /if }}
+                            
+                            {{ if success }}
+                            {{ redirect to="/thank-you" }}
+                            {{ /if }}
+                            <div class="form-group row mb-0">
+                                <label for="license-type" class="col-sm-12 col-form-label serif">License Type<span class="orange">*</span></label>
+                            </div>
+                            <div class="form-group row mb-3">
+                                <div class="col-sm-12">
+                                    <div class="dropdown">
+                                        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <span>Individual License</span>
+                                            <i class='fa fa-angle-down fa-lg'></i>
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <a class="dropdown-item" href="#">Individual License</a>
+                                            <a class="dropdown-item" href="#">Developer License</a>
+                                            <a class="dropdown-item" href="#">Custom License / Design</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group row mb-0">
+                                <label for="full-name" class="col-sm-12 col-form-label serif">Land Type<span class="orange">*</span></label>
+                            </div>
+                            <div class="form-group row mb-3">
+                                <div class="col-sm-12">
+                                    <div class="dropdown">
+                                        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <span>I haven't Purchased Land Yet</span>
+                                            <i class='fa fa-angle-down fa-lg'></i>
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <a class="dropdown-item" href="#">I haven't Purchased Land Yet</a>
+                                            <a class="dropdown-item" href="#">I have land to build on</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group row mb-0">
+                                <label for="first-name" class="col-sm-12 col-form-label serif">Full Name<span class="orange">*</span></label>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-sm-6">
+                                    <input class="form-control" required type="text" id="first-name" name="first-name" placeholder="First" value="{{ old:first-name }}">
+                                </div>
+                                <div class="col-sm-6">
+                                    <input class="form-control" required type="text" id="last-name" name="last-name" placeholder="Last " value="{{ old:last-name }}">
+                                </div>
+                            </div>
+                            
+                            <div class="form-group row mb-0">
+                                <label for="email" class="col-sm-12 col-form-label serif">Email<span class="orange">*</span></label>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-sm-12">
+                                    <input class="form-control" required type="text" id="email" name="email" placeholder="abc@email.com" value="{{ old:email }}">
+                                </div>
+                            </div>
+                            <div class="form-group row mb-0">
+                                <label for="phone" class="col-sm-12 col-form-label serif">phone</label>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-sm-12">
+                                    <input class="form-control" required type="text" id="phone" name="phone" placeholder="222-222-2222" value="{{ old:phone }}">
+                                </div>
+                            </div>
+                            
+                            <div class="form-group row mb-0 mt-1">
+                                <label for="comment" class="col-sm-12 col-form-label serif">Additional Comments</label>
+                            </div>
+                            <div class="form-group row mb-1">
+                                <div class="col-sm-12">
+                                    <textarea class="form-control" rows="6" type="text" id="comment" name="comment" value="{{ old:comment }}"></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group row secondary-contact">
+                                <div class="col-sm-12">
+                                    <textarea class="form-control"  type="text" id="secondary-contact" name="secondary-contact" value="{{ old:secondary-contact }}"></textarea>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group row">
+                                <div class="col-sm-12">
+                                    <button id="inquire-button" class="button-inquire">Submit</button>
+                                </div>
+                            </div>
+                            
+                            
+                            
+                        </div>
+                    </form>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="content large centered">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <h2>{{ faq_header }}</h2>
+                </div>
+            </div>
+            <div class="row isolate">
+                <div class="faq-container">
+                    {{ faq_grid }}
+                    <div class="faq-wrapper">
+                        <h3>{{ title }}</h3>
+                        <p>{{ descriptor }}</p>
+                    </div>
+                    {{ /faq_grid }}
+                </div>
+            </div>
+            <div class="row text-center centered">
+                <div class="container disclaimer">
+                    <a class="license-button" data-toggle="modal" data-target="#license-disclaimer">License Disclaimer</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+</div>
+
+  
+<div class="modal fade" id="license-disclaimer" tabindex="-1" role="dialog" aria-labelledby="legalDisclaimer" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="legalDisclaimer">License Disclaimer</h4>
+      </div>
+      
+      <div class="modal-body">
+        {{ license_disclaimer }}
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>

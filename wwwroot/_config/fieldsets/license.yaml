@@ -1,0 +1,104 @@
+title: License
+fields:
+  heroImages:
+    display: Hero Images and Headlines
+    type: grid
+    starting_rows: 1
+    min_rows: 1
+    fields:
+      image:
+        type: file
+        browse: false
+        display: Images
+        destination: assets/img/homes
+        show_thumbnail: true
+        width: 25%
+      headline:
+        type: textarea
+        display: Headline
+      subHeadline:
+        type: textarea
+        display: Sub Headline
+  license_intro:
+    type: textarea
+    display: License Intro
+  what_header:
+    type: text
+    display: What Is Header
+  what_explainer:
+    type: textarea
+    display: What Explainer
+  what_grid:
+    type: grid
+    display: What Checklist
+    fields:
+      title:
+        type: text
+        display: Title
+      descriptor:
+        type: text
+        display: Descriptor
+  how_header:
+    type: text
+    display: How Header
+  how_explainer:
+    type: textarea
+    display: How Explainer
+  how_grid:
+    type: grid
+    display: How Icons
+    fields:
+      icon:
+        type: file
+        browse: false
+        display: Images
+        destination: assets/img
+        show_thumbnail: true
+        width: 25%
+      title:
+        type: text
+        display: Title
+      descriptor:
+        type: text
+        display: Descriptor
+  investment_header:
+    type: text
+    display: Investment Header
+  investment_explainer:
+    type: textarea
+    display: Investment Explainer
+  license_header:
+    type: text
+    display: License Header
+  license_grid:
+    type: grid
+    display: License Options
+    fields:
+      title:
+        type: text
+        display: Title
+      descriptor:
+        type: text
+        display: Descriptor
+      price:
+        type: text
+        display: Price
+  license_intro:
+    type: text
+    display: License Form Intro
+  faq_header:
+    type: text
+    display: FAQ Header
+  faq_grid:
+    type: grid
+    display: FAQ Items
+    fields:
+      title:
+        type: text
+        display: Title
+      descriptor:
+        type: text
+        display: Descriptor
+  license_disclaimer:
+    type: redactor
+    display: License Disclaimer Text

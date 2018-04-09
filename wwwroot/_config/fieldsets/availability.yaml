@@ -37,6 +37,9 @@ fields:
   availability:
     type: text
     display: Availability
+  license_details:
+    type: text
+    display: License Details for Legend
   size:
     type: text
     display: Size

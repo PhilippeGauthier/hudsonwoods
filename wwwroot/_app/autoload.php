@@ -6,7 +6,7 @@ define("STATAMIC_START", microtime(true));
 global $is_debuggable_route;
 $is_debuggable_route = false;
 
-const STATAMIC_VERSION = '1.11.3';
+const STATAMIC_VERSION = '1.11.4';
 const APP_PATH = __DIR__;
 
 // handle the PHP development server

@@ -108,7 +108,13 @@ img {
     padding-bottom: 60px;
     &.large {
       padding: 100px 0;
+      &.top-only {
+        padding-bottom: 0;
+      }
     }
+  }
+  &.top-only {
+    padding-bottom: 0;
   }
 }
 

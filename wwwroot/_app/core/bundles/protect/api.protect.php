@@ -3,9 +3,9 @@
 class API_protect extends API
 {
     /**
-     * Check to see if the current member has the appropriate passwords needed 
+     * Check to see if the current member has the appropriate passwords needed
      * to view this given $url
-     * 
+     *
      * @param string  $url  URL to check passwords for
      * @return bool
      */
@@ -14,9 +14,9 @@ class API_protect extends API
         return $this->tasks->hasPassword($url);
     }
 
-    
+
     /**
-     * Check to see if the current member has the appropriate IP addresses 
+     * Check to see if the current member has the appropriate IP addresses
      * needed to view this given $url
      *
      * @param string  $url  URL to check IP addresses for
@@ -26,11 +26,11 @@ class API_protect extends API
     {
         return $this->tasks->hasIP($url);
     }
-    
-    
+
+
     /**
      * Does the current member have access to a given $url?
-     * 
+     *
      * @param string  $url  URL to check
      * @return boolean
      * @throws Exception
@@ -50,16 +50,16 @@ class API_protect extends API
         // determine URLs
         $login_url       = URL::prependSiteRoot(array_get($scheme, 'login_url', $this->fetchConfig('login_url', '/', null, false, false)));
         $no_access_url   = URL::prependSiteRoot(array_get($scheme, 'no_access_url', $this->fetchConfig('no_access_url', '/', null, false, false)));
-        $password_url    = URL::prependSiteRoot(array_get($scheme, 'password_form_url', $this->fetchConfig('password_url', '/', null, false, false)));
-        
+        $password_url    = URL::prependSiteRoot(array_get($scheme, 'password_form_url', $this->fetchConfig('password_form_url', '/', null, false, false)));
+
         // support external log-in systems
         $require_member  = array_get($scheme, 'require_member', $this->fetchConfig('require_member', true, null, true, false));
         $return_variable = array_get($scheme, 'return_variable', $this->fetchConfig('return_variable', 'return', null, false, false));
         $use_full_url    = array_get($scheme, 'use_full_url', $this->fetchConfig('use_full_url', false, null, true, false));
-        
+
         // get the current URL
         $current_url     = ($use_full_url) ? URL::tidy(Config::getSiteURL() . '/' . URL::getCurrent()) : URL::getCurrent();
-        
+
         // append query string
         if (!empty($_GET)) {
             $current_url .= '?' . http_build_query($_GET, '', '&');
@@ -70,7 +70,7 @@ class API_protect extends API
 
         if (isset($scheme['password'])) {
             // this is a password-check
-            
+
             // get the form URL
             $form_url = array_get(  // check the password settings
                 $scheme['password'],
@@ -143,7 +143,7 @@ class API_protect extends API
 
     /**
      * Evaluates a password for a given $url
-     * 
+     *
      * @param string  $url  URL to evaluate passwords for
      * @return bool
      */
@@ -151,11 +151,11 @@ class API_protect extends API
     {
         return $this->hasPassword($url);
     }
-    
+
 
     /**
      * Evaluates an IP address for a given $url
-     * 
+     *
      * @param string  $url  URL to evaluate IP addresses for
      * @return bool
      */
