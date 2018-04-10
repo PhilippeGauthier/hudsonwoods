@@ -36,12 +36,19 @@
     .dropdown-menu, .dropdown-toggle, .dropdown-menu:focus, .dropdown-toggle:focus {
       border: 1px solid $base-font-color;
       background-color: white;
+      padding: 1.5rem 2rem;
+      width: 100%;
       .fa-angle-down {
         color: #464a4c;
       }
       .btn-secondary {
         color: #464a4c;
       }
+    }
+    .dropdown-toggle {
+        i {
+            margin-left: 5px;
+        }
     }
     .dropdown a {
         text-transform: none;

@@ -8101,13 +8101,18 @@ nav.navbar .navbar-brand {
 
 .inquire .dropdown-menu, .inquire .dropdown-toggle, .inquire .dropdown-menu:focus, .inquire .dropdown-toggle:focus {
   border: 1px solid #6e736c;
-  background-color: white; }
+  background-color: white;
+  padding: 1.5rem 2rem;
+  width: 100%; }
 
 .inquire .dropdown-menu .fa-angle-down, .inquire .dropdown-toggle .fa-angle-down, .inquire .dropdown-menu:focus .fa-angle-down, .inquire .dropdown-toggle:focus .fa-angle-down {
   color: #464a4c; }
 
 .inquire .dropdown-menu .btn-secondary, .inquire .dropdown-toggle .btn-secondary, .inquire .dropdown-menu:focus .btn-secondary, .inquire .dropdown-toggle:focus .btn-secondary {
   color: #464a4c; }
+
+.inquire .dropdown-toggle i {
+  margin-left: 5px; }
 
 .inquire .dropdown a {
   text-transform: none; }
