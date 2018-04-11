@@ -19,7 +19,7 @@ fields:
       subHeadline:
         type: textarea
         display: Sub Headline
-  license_page_ntro:
+  license_page_intro:
     type: textarea
     display: License Intro
   what_header:
