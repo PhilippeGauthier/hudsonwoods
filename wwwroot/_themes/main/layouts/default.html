@@ -145,26 +145,32 @@ var google_remarketing_only = true;
 </div>
 </noscript>
 <script>
-  function setCookie() {
+  function licenseClosedCookie() {
     Cookies.set('name', 'license-closed',{ expires: 14 });
   };
-  function destroyCookie() {
-    Cookies.remove('name');
+  function licenseSubmitCookie() {
+    Cookies.set('name', 'license-submitted');
+  };
+  function destroyCookies() {
+    Cookies.remove('name','license-closed');
+    Cookies.remove('name', 'license-submitted');
   }
   $('.license-close-button').click(function() {
-    setCookie();
+    licenseClosedCookie();
   });
   $('.license-button').click(function() {
-    setCookie();
+    licenseClosedCookie();
+  });
+  $('#inquire-button').click(function() {
+    licenseSubmitCookie();
   });
   $('#license-cookie-test').click(function() {
-    destroyCookie();
-    console.log('cookie removed');
+    destroyCookies();
   });
-if(Cookies.get('name') === "license-closed") {
-  console.log('cookie active');
+if(Cookies.get('name') === "license-closed" || Cookies.get('name') === "license-submitted" ) {
   $('#license-popup').css('display', 'none');
 }
+
 </script>
 </body>
 </html>
