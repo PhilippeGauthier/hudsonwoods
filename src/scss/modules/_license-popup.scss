@@ -1,7 +1,97 @@
+#license-cookie-test {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: $red;
+    z-index: 10000;
+    color: white;
+    padding: 10px;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
 #license-popup{
-    position: absolute;
+    position: fixed;
+    bottom: -200px;
+    z-index: 100;
     background-color: $red;
     width: 100%;
     padding: 10px 0;
+    transition: all 1s;
+    font-size: 15px;
+    @include breakpoint(medium) {
+        font-size: 18px;
+    }
+    &.open {
+        bottom: 0;
+    }
+    .container {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        @include breakpoint(medium) {
+            justify-content: space-between;
+            flex-flow: row wrap;
+        }
+    }
+    .popup-details {
+        display: flex;
+        align-items: center;
+        flex-flow: column nowrap;
+        margin-top: 10px;
+        @include breakpoint(medium) {
+            margin-top: 0;
+            justify-content: space-between;
+            flex-flow: row wrap;
+        }
+    }
+    * {
+        color: white;
+    }
+    .thin {
+        font-weight: 100;
+        margin-left: 20px;
+    }
+    .license-button {
+        border-radius: 0;
+        background-color: #fff;
+        color: $red;
+        // position: absolute;
+        right: 0;
+        padding: 5px 25px;
+        font-size: 13px;
+        display: inline-block;
+        width: 150px;
+        text-align: center;
+        margin-top: 10px;
+    }
+    .license-close-button {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        height: 25px;
+        width: 25px;
+        border-radius: 50%;
+        border: 1px solid white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include breakpoint(medium) {
+            right: 10px;
+            bottom: 10px;
+        }
+        img {
+            height: 12px;
+            width: 12px;
+        }
+        &:hover {
+            cursor: pointer;
+            background-color:lighten($red, 3%);
+        }
+    }
+
 }
 

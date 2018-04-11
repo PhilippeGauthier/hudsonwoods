@@ -20,10 +20,10 @@ send_notification_email: true
 #    - mailgun
 #    - postmark
 #    - sendgrid
-email_handler:
+email_handler: mailgun
 
 # chosen mail service's api key
-email_handler_key:
+email_handler_key: mg.hudsonwoods.com:key-009a8a4a39d42d7a2cb418948c7005ac
 
 master_killswitch: false
 

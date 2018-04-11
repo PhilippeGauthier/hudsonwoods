@@ -25,7 +25,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-8 col-md-offset-2">
-                    <p style="text-align: center" class="large">{{ license_intro }}</p>
+                    <p style="text-align: center" class="large">{{ license_page_intro }}</p>
                 </div>
             </div>
         </div>
@@ -87,7 +87,7 @@
                 </div>
             </div>
             <div class="row isolate">
-                <div class="how-container">
+
                     {{ license_grid }}
                     <div class="col-md-4">
                         <div class="license-wrapper">
@@ -101,7 +101,7 @@
                     </div>
                     {{ /license_grid }}
                 </div>
-            </div>
+
         </div>
     </section>
     <section class="content lighter-gray centered">
@@ -112,10 +112,10 @@
                 </div>
             </div>
             <div class="row mt-1 justify-content-center">
-                <div class="col-md-6 col-md-offset-3">
+                <div class="col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
                     
                     
-                    <form action="">
+                        {{ raven:form formset="license" attr="id:license-form" }}
                         <div class="inquire">
                             {{ if errors }}
                             <div class="alert alert-danger">
@@ -125,9 +125,7 @@
                             </div>
                             {{ /if }}
                             
-                            {{ if success }}
-                            {{ redirect to="/thank-you" }}
-                            {{ /if }}
+
                             <div class="form-group row mb-0">
                                 <label for="license-type" class="col-sm-12 col-form-label serif">License Type<span class="orange">*</span></label>
                             </div>
@@ -174,10 +172,10 @@
                             </div>
                             <div class="form-group row">
                                 <div class="col-sm-6">
-                                    <input class="form-control" required type="text" id="first-name" name="first-name" placeholder="First" value="{{ old:first-name }}">
+                                    <input class="form-control" required type="text" id="first-name" name="first-name" placeholder="First">
                                 </div>
                                 <div class="col-sm-6">
-                                    <input class="form-control" required type="text" id="last-name" name="last-name" placeholder="Last " value="{{ old:last-name }}">
+                                    <input class="form-control" required type="text" id="last-name" name="last-name" placeholder="Last Name">
                                 </div>
                             </div>
                             
@@ -186,7 +184,7 @@
                             </div>
                             <div class="form-group row">
                                 <div class="col-sm-12">
-                                    <input class="form-control" required type="text" id="email" name="email" placeholder="abc@email.com" value="{{ old:email }}">
+                                    <input class="form-control" required type="text" id="email" name="email" placeholder="abc@email.com">
                                 </div>
                             </div>
                             <div class="form-group row mb-0">
@@ -194,7 +192,7 @@
                             </div>
                             <div class="form-group row">
                                 <div class="col-sm-12">
-                                    <input class="form-control" required type="text" id="phone" name="phone" placeholder="222-222-2222" value="{{ old:phone }}">
+                                    <input class="form-control" type="text" id="phone" name="phone" placeholder="222-222-2222">
                                 </div>
                             </div>
                             
@@ -203,12 +201,12 @@
                             </div>
                             <div class="form-group row mb-1">
                                 <div class="col-sm-12">
-                                    <textarea class="form-control" rows="6" type="text" id="comment" name="comment" value="{{ old:comment }}"></textarea>
+                                    <textarea class="form-control" rows="6" type="text" id="comment" name="comment"></textarea>
                                 </div>
                             </div>
                             <div class="form-group row secondary-contact">
                                 <div class="col-sm-12">
-                                    <textarea class="form-control"  type="text" id="secondary-contact" name="secondary-contact" value="{{ old:secondary-contact }}"></textarea>
+                                    <textarea class="form-control"  type="text" id="secondary-contact" name="secondary-contact" ></textarea>
                                 </div>
                             </div>
                             
@@ -221,7 +219,7 @@
                             
                             
                         </div>
-                    </form>
+                    {{ /raven:form }}
                     
                 </div>
             </div>
@@ -275,3 +273,6 @@
     </div>
   </div>
 </div>
+
+
+

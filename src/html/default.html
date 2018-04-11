@@ -96,6 +96,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   {{ theme:partial src="footer" }}
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  {{ if segment_1 !== "license" }}
+  <script>
+    $(document).ready(function() {
+        setTimeout(function() {
+          $('#license-popup').addClass('open');
+        }, {{ if segment_1 }}0{{ else }}1000{{ endif }});
+    });
+    $('.license-close-button').click(function(){
+      console.log('foo');
+      $('#license-popup').removeClass('open');
+    })
+</script>
+{{ /if}}
+{{ if segment_1 == "license" }}
+{{ theme:partial src="modals/license" }}
+{{ /if}}
+
   {{ if segment_1 ==="in-the-area" }}
   <script src="{{ theme:js src="leaflet_0.8.min" }}"></script>
   <script src="{{ theme:js src="InTheAreaGeojson.js" }}"></script>
@@ -129,14 +146,24 @@ var google_remarketing_only = true;
 </noscript>
 <script>
   function setCookie() {
-    Cookies.set('name', 'garfield');
+    Cookies.set('name', 'license-closed',{ expires: 14 });
   };
-  $('.close-button').click(function() {
+  function destroyCookie() {
+    Cookies.remove('name');
+  }
+  $('.license-close-button').click(function() {
     setCookie();
-    console.log('clicked');
   });
-if(Cookies.get('name') === "garfield") {
-  $('#email-popup').css('display', 'none');
+  $('.license-button').click(function() {
+    setCookie();
+  });
+  $('#license-cookie-test').click(function() {
+    destroyCookie();
+    console.log('cookie removed');
+  });
+if(Cookies.get('name') === "license-closed") {
+  console.log('cookie active');
+  $('#license-popup').css('display', 'none');
 }
 </script>
 </body>

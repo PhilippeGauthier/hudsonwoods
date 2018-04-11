@@ -3,7 +3,7 @@
         font-size: 20px;
     }
     .isolate {
-        margin-top: 80px;
+        margin-top: 30px;
     } 
     .sub-header {
         font-size: 24px;
@@ -20,18 +20,30 @@
     }
     .how-container {
         display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+    }
+    @include breakpoint(medium) {
+        .isolate {
+            margin-top: 80px;
+        }
     }
     .how-wrapper {
-        flex-basis: 20%;
-        width: 20%;
+        flex-basis: 33.3333%;
+        width: 33.3333%;
         text-align: center;
         * {
             max-width: 80%;
+            margin:0 auto 10px;
+        }
+        @include breakpoint(medium) {
+            flex-basis: 20%;
+            width: 20%;
         }
     }
     .license-wrapper {
         position: relative;
-        margin: 0 30px;
+        margin: 0 100px 50px;
         * {
             text-align: center;
         }
@@ -54,6 +66,9 @@
         height: 300px;
         background-color: #fff;
         border: 3px solid $yellow;
+        @include breakpoint(medium) {
+            margin: 0 30px;
+        }
     }
     .faq-container {
         display: flex;
@@ -61,13 +76,20 @@
         width: 80%;
         margin: 0 auto;
         .faq-wrapper {
-            width: 50%;
-            flex-basis: 50%;
+            width: 100%;
+            flex-basis: 100%;
             padding-left: 15px;
             padding-right: 15px;
             margin-bottom: 20px;
             * {
                 text-align: left;
+            }
+        }
+        @include breakpoint(medium) {
+            width: 80%;
+            .faq-wrapper {
+                width: 50%;
+                flex-basis: 50%;
             }
         }
     }
