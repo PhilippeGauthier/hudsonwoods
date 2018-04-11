@@ -7990,7 +7990,7 @@ nav.navbar .navbar-brand {
   z-index: 100;
   background-color: #FC5457;
   width: 100%;
-  padding: 10px 0;
+  padding: 15px 0;
   transition: all 1s;
   font-size: 15px;
   /* Portrait tablet to landscape and desktop */ }
@@ -8057,7 +8057,12 @@ nav.navbar .navbar-brand {
   display: inline-block;
   width: 150px;
   text-align: center;
-  margin-top: 10px; }
+  margin-top: 10px;
+  /* Portrait tablet to landscape and desktop */ }
+
+@media (min-width: 992px) {
+  #license-popup .license-button {
+    margin-top: 0; } }
 
 #license-popup .license-close-button {
   position: absolute;
@@ -8078,7 +8083,7 @@ nav.navbar .navbar-brand {
 @media (min-width: 992px) {
   #license-popup .license-close-button {
     right: 10px;
-    bottom: 10px; } }
+    top: 18px; } }
 
 #license-popup .license-close-button img {
   height: 12px;
