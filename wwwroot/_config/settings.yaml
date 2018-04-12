@@ -167,7 +167,7 @@ _admin_theme: ascent
 
 # Customize which pages show in the control panel
 _admin_nav:
-  dashboard: false
+  dashboard: true
   pages:     true
   members:   true
   account:   true
@@ -176,7 +176,7 @@ _admin_nav:
   help:      true
   view_site: true
   logout:    true
-  raven: true
+  raven:     true
 
 # When you log in, where would you like to start?
 _admin_start_page: pages

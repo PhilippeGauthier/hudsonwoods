@@ -8277,6 +8277,9 @@ nav.navbar .navbar-brand {
   padding: 1.5rem 2rem;
   width: 100%; }
 
+.inquire .dropdown-menu i, .inquire .dropdown-toggle i, .inquire .dropdown-menu:focus i, .inquire .dropdown-toggle:focus i {
+  float: right; }
+
 .inquire .dropdown-menu .fa-angle-down, .inquire .dropdown-toggle .fa-angle-down, .inquire .dropdown-menu:focus .fa-angle-down, .inquire .dropdown-toggle:focus .fa-angle-down {
   color: #464a4c; }
 
