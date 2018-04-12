@@ -50,11 +50,12 @@ messages:
   years: "That needs to be a number"
 
 # Configure notification email
-# email:
-#   to: "mk@langarchitecture.com, pgauthier@gmail.com, sales@hudsonwoods.com, dl@langarchitecture.com"
-#   from: info@hudsonwoods.com
-#   subject: Hudson Woods License Inquiry
-#   automagic: true
+email:
+  to: "pgauthier@gmail.com"
+  # to: "mk@langarchitecture.com, pgauthier@gmail.com, sales@hudsonwoods.com, dl@langarchitecture.com"
+  from: info@hudsonwoods.com
+  subject: Hudson Woods License Inquiry
+  automagic: true
   # html_template: html_email
   # text_template: text_email
 
