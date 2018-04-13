@@ -62,7 +62,7 @@ gulp.task('replaceHTML', function(){
     .pipe(htmlreplace({
       'js': {
         src: null,
-        tpl: '<script src="{{ theme:js src="scripts.min.js" }}"></script>'
+        tpl: '<script src="{{ theme:js src="main.min.js" }}"></script>'
       },
       'css': {
         src: null,
@@ -84,7 +84,7 @@ gulp.task('copyJS', ['scripts'], function(){
 });
 
 gulp.task('compress', function() {
-  return gulp.src('./src/dist/main.js')
+  return gulp.src(path.JS_SRC_DIST + 'main.js')
     .pipe(uglify().on('error', gutil.log))
     .pipe(rename('main.min.js'))
     .pipe(gulp.dest(path.JS_OUT).on('error', gutil.log));

@@ -23,11 +23,24 @@
         flex-flow: row wrap;
         justify-content: center;
     }
+    .checklist {
+        text-align: center;
+        img {
+            margin: 25px auto 25px;
+            max-width: 50px;
+        }
+    }
     @include breakpoint(medium) {
+        .checklist {
+            img {
+                margin: 0 auto 25px;
+            }
+        }
         .isolate {
             margin-top: 80px;
         }
     }
+
     .how-wrapper {
         flex-basis: 100%;
         width: 100%;

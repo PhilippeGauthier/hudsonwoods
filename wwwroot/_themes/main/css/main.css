@@ -8123,7 +8123,16 @@ nav.navbar .navbar-brand {
   -ms-flex-pack: center;
   justify-content: center; }
 
+.license .checklist {
+  text-align: center; }
+
+.license .checklist img {
+  margin: 25px auto 25px;
+  max-width: 50px; }
+
 @media (min-width: 992px) {
+  .license .checklist img {
+    margin: 0 auto 25px; }
   .license .isolate {
     margin-top: 80px; } }
 
