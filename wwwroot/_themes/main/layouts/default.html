@@ -44,7 +44,9 @@ src="https://www.facebook.com/tr?id=1832634483660033&ev=PageView&noscript=1"
 /></noscript>
 <!-- DO NOT MODIFY -->
 <!-- End Facebook Pixel Code -->
-  <link rel="stylesheet" href="{{ theme:css src="main.min.css" }}" />
+  <!-- build:css -->
+  <link rel="stylesheet" href="{{ theme:css }}" />
+  <!-- endbuild -->
   <link rel="shortcut icon" type="image/png" href="{{ theme:img src="favicon.ico" }}">
 
   <title>
@@ -120,7 +122,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   {{ if segment_1 === "availability" }}
   <script src="{{ theme:js src="AvailabilityGeojson.js" }}"></script>
   {{ endif }}
-  <script src="{{ theme:js src="main.min.js" }}"></script>
+  <!-- build:js -->
+  <script src="{{ theme:js }}"></script>
+  <!-- endbuild -->
 
 <!-- Google Code for Remarketing Tag -->
 
