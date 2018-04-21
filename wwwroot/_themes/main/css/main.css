@@ -9321,7 +9321,7 @@ p.large {
   border: 1px solid #bbbbbb;
   background-color: #e7e4de; }
 
-.legend .legend-marker.model-house span {
+.legend .legend-marker.model-house span::after {
   content: url("../../../assets/img/availability/icons/Model-House-icon-key.png"); }
 
 .legend .legend-marker:last-of-type {
