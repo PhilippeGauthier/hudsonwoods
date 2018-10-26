@@ -1,7 +1,7 @@
-<div id="map" class="availability">
+<!-- <div id="map" class="availability">
 <div class="legend">
 	<div class="legend-marker sold"><span class="spacer"></span>Sold</div>
-	<div class="legend-marker model-house"><span class="spacer"></span>Model House</div>
+	<div class="legend-marker for-sale"><span class="spacer"></span>For Sale</div>
 </div>
 <div class="legend availability">
 	<div class="legend-marker" style="text-align: center">LICENSING DETAILS</div>
@@ -16,4 +16,26 @@
 </div>
 
 	<a href="" class="anchor availability" id="availability-anchor"></a>
-</div>
+</div> -->
+
+<div id="map" class="availability">
+	<div class="legend">
+		<div class="legend-marker for-sale"><span class="spacer"></span>For Sale</div>	
+		<div class="legend-marker sold"><span class="spacer"></span>Sold</div>
+	</div>
+	<div class="legend availability">
+		<div class="legend-marker" style="text-align: center">AVAILABLE LOTS</div>
+		<div class="table">
+		{{ entries:listing folder="availability/for-sale" sort_dir="asc" }}
+			<a href="{{ url }}" class="table-row lot">
+				<div class="table-cell">{{ title }}</div>
+				<div class="table-cell">{{ size }} AC</div>
+				<div class="table-cell">{{ if hide_cost }}Pricing...{{ else }}{{ cost }}{{ endif }}</div>
+			</a>
+		{{ /entries:listing }}
+		</div>
+		<a href="/contact" class="inquire">INQUIRE HERE</a>
+	</div>
+	
+		<a href="" class="anchor availability" id="availability-anchor"></a>
+	</div>

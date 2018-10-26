@@ -69,12 +69,12 @@
 				background-color: #e7e4de;
 			}
 		}
-		&.model-house {
-			span::after {
-				content:url("../../../assets/img/availability/icons/Model-House-icon-key.png");
-			}
+		// &.model-house {
+		// 	span::after {
+		// 		content:url("../../../assets/img/availability/icons/Model-House-icon-key.png");
+		// 	}
 			
-		}
+		// }
 		&:last-of-type {
 			margin-bottom: 0;
 		}

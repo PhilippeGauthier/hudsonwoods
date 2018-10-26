@@ -2914,7 +2914,7 @@ th {
 
 html {
   font-size: 10px;
-  -webkit-tap-highlight-color: transparent; }
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
 
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -5664,7 +5664,6 @@ button.close {
   cursor: pointer; }
 
 .leaflet-container {
-  cursor: -webkit-grab;
   cursor: -moz-grab; }
 
 .leaflet-popup-pane,
@@ -5674,7 +5673,6 @@ button.close {
 .leaflet-dragging .leaflet-container,
 .leaflet-dragging .leaflet-clickable {
   cursor: move;
-  cursor: -webkit-grabbing;
   cursor: -moz-grabbing; }
 
 /* visual tweaks */
@@ -6006,7 +6004,7 @@ button.close {
   user-select: none;
   -ms-touch-action: none;
   touch-action: none;
-  -webkit-tap-highlight-color: transparent; }
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
 
 .slick-list {
   position: relative;
@@ -6333,14 +6331,12 @@ button.close {
 
 .fotorama__wrap .fotorama__grab {
   cursor: move;
-  cursor: -webkit-grab;
   cursor: -o-grab;
   cursor: -ms-grab;
   cursor: grab; }
 
 .fotorama__grabbing * {
   cursor: move;
-  cursor: -webkit-grabbing;
   cursor: -o-grabbing;
   cursor: -ms-grabbing;
   cursor: grabbing; }
@@ -7987,7 +7983,7 @@ nav.navbar .navbar-brand {
 #license-popup {
   position: fixed;
   bottom: -200px;
-  z-index: 100;
+  z-index: 10000;
   background-color: #FC5457;
   width: 100%;
   padding: 15px 0;
@@ -9321,9 +9317,6 @@ p.large {
   border: 1px solid #bbbbbb;
   background-color: #e7e4de; }
 
-.legend .legend-marker.model-house span::after {
-  content: url("../../../assets/img/availability/icons/Model-House-icon-key.png"); }
-
 .legend .legend-marker:last-of-type {
   margin-bottom: 0; }
 
@@ -9669,7 +9662,7 @@ p.large {
 
 #upgrades .mask-overlay {
   transition: 0.2s;
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0);
   position: absolute;
   top: 0;
   bottom: 0;

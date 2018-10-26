@@ -6336,18 +6336,18 @@ function resetMap(e) {
 }
 
 // Draw Model Home Icon
-var modelHomeIcon = L.icon({
-    iconUrl: 'assets/img/availability/icons/Model-House-icon-map.png',
-    // shadowUrl: 'leaf-shadow.png',
+// var modelHomeIcon = L.icon({
+//     iconUrl: 'assets/img/availability/icons/Model-House-icon-map.png',
+//     // shadowUrl: 'leaf-shadow.png',
 
-    iconSize:     [11, 11], // size of the icon
-    // shadowSize:   [50, 64], // size of the shadow
-    iconAnchor:   [0,0], // point of the icon which will correspond to marker's location
-    // shadowAnchor: [4, 62],  // the same for the shadow
-    // popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
-});
+//     iconSize:     [11, 11], // size of the icon
+//     // shadowSize:   [50, 64], // size of the shadow
+//     iconAnchor:   [0,0], // point of the icon which will correspond to marker's location
+//     // shadowAnchor: [4, 62],  // the same for the shadow
+//     // popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+// });
 
-L.marker([41.8888444,-74.310715], {icon: modelHomeIcon}).addTo(map);
+// L.marker([41.8888444,-74.310715], {icon: modelHomeIcon}).addTo(map);
 
 // Sold Map Tiles
 
