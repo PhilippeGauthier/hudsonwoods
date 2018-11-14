@@ -46,5 +46,5 @@ RewriteRule ^(.*)$ index.php [QSA,L]
 php_value post_max_size 150M
 php_value upload_max_filesize 30M
 
-RewriteCond %{HTTP_HOST} ^www.hudsonwoods.com [NC]
-RewriteRule ^(.*)$ https://hudsonwoods.com/$1 [L,R=301]
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
