@@ -126,4 +126,13 @@ img {
 }
 
 
+.centered-modal.in {
+  display: flex !important;
+}
+.centered-modal .modal-dialog {
+  margin: auto;
+}
 
+#comtact .modal-content {
+  background-color: #f3f3f3;;
+}

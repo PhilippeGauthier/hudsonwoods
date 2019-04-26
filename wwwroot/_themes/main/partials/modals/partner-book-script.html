@@ -1,0 +1,23 @@
+<script>
+    const inputSelector = ':input[required]:visible';
+
+    function checkForm() {
+        // here, "this" is an input element
+        var isValidForm = true;
+        $(this.form).find(inputSelector).each(function () {
+            if (!this.value.trim()) {
+                isValidForm = false;
+            }
+        });
+        $(this.form).find('#submit').prop('disabled', !isValidForm);
+        return isValidForm;
+    }
+    $('#submit').closest('form')
+        // in a user hacked to remove "disabled" attribute, also monitor the submit event
+        .submit(function () {
+            // launch checkForm for the first encountered input,
+            // use its return value to prevent default if form is not valid
+            return checkForm.apply($(this).find(':input')[0]);
+        })
+        .find(inputSelector).keyup(checkForm).keyup();
+</script>
