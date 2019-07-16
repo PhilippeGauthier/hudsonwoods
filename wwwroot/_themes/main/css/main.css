@@ -7543,7 +7543,12 @@ img {
   width: 100%; }
 
 #header-availability .mb-5 {
-  margin-bottom: 50px; }
+  margin-bottom: 40px;
+  /* Landscape phone to portrait tablet */ }
+
+@media (min-width: 767px) {
+  #header-availability .mb-5 {
+    margin-bottom: 80px; } }
 
 #header-availability h2 {
   font-size: 30px;
@@ -7555,6 +7560,14 @@ img {
   #header-availability h2 {
     font-size: 60px;
     margin-top: 100px; } }
+
+#header-availability h3 {
+  font-size: 24px;
+  /* Landscape phone to portrait tablet */ }
+
+@media (min-width: 767px) {
+  #header-availability h3 {
+    font-size: 36px; } }
 
 #header-availability .brochure-btn {
   margin-top: 10px;

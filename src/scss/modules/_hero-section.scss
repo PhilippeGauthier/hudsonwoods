@@ -23,7 +23,10 @@
     width: 100%;
   }
   .mb-5 {
-    margin-bottom: 50px;
+    margin-bottom: 40px;
+    @include breakpoint(small) {
+      margin-bottom: 80px;
+    }
   }
   h1 {
 
@@ -35,6 +38,12 @@
     @include breakpoint(small) {
       font-size: 60px;
       margin-top: 100px;
+    }
+  }
+  h3 {
+    font-size: 24px;
+    @include breakpoint(small) {
+      font-size: 36px;
     }
   }
   
