@@ -22,20 +22,27 @@
   .slick-carousel {
     width: 100%;
   }
+  .mb-5 {
+    margin-bottom: 50px;
+  }
   h1 {
 
   }
   h2 {
     font-size: 30px;
     margin-top: 100px;
+    margin-bottom: 0px;
     @include breakpoint(small) {
       font-size: 60px;
       margin-top: 100px;
     }
   }
+  
   .brochure-btn {
     margin-top: 10px;
     display: inline-block;
+    width: 230px;
+    text-align: center;
   }
   #arrow {
     display: none;
