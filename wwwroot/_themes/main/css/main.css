@@ -7551,29 +7551,56 @@ img {
     margin-bottom: 80px; } }
 
 #header-availability h2 {
-  font-size: 30px;
+  font-size: 36px;
   margin-top: 100px;
   margin-bottom: 0px;
-  /* Landscape phone to portrait tablet */ }
+  /* Landscape phone to portrait tablet */
+  /* Large desktop */ }
 
 @media (min-width: 767px) {
   #header-availability h2 {
-    font-size: 60px;
+    font-size: 64px;
+    margin-top: 100px; } }
+
+@media (min-width: 1200px) {
+  #header-availability h2 {
+    font-size: 85px;
     margin-top: 100px; } }
 
 #header-availability h3 {
   font-size: 24px;
-  /* Landscape phone to portrait tablet */ }
+  /* Landscape phone to portrait tablet */
+  /* Large desktop */ }
 
 @media (min-width: 767px) {
   #header-availability h3 {
-    font-size: 36px; } }
+    font-size: 44px; } }
+
+@media (min-width: 1200px) {
+  #header-availability h3 {
+    font-size: 55px; } }
 
 #header-availability .brochure-btn {
   margin-top: 10px;
   display: inline-block;
-  width: 230px;
-  text-align: center; }
+  width: 120px;
+  text-align: center;
+  font-size: 18px;
+  padding: 8px;
+  /* Landscape phone to portrait tablet */
+  /* Large desktop */ }
+
+@media (min-width: 767px) {
+  #header-availability .brochure-btn {
+    padding: 10px;
+    width: 160px;
+    font-size: 24px; } }
+
+@media (min-width: 1200px) {
+  #header-availability .brochure-btn {
+    padding: 12px;
+    width: 222px;
+    font-size: 34px; } }
 
 #header-availability #arrow {
   display: none;
