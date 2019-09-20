@@ -189,21 +189,29 @@
   }
 }
 
-// .container.scrollme {
-//   h1 {
-//     margin-top: 320px;
-//   }
-//   &.landing {
-//     h1 {
-//       margin-top: 150px;
-//     }
-//     h1,h3 {
-//       text-align: left;
-//     }
-//   }
-//   @include breakpoint(small) {
-//     h1 {
-//       margin-top: 320px;
-//     }    
-//   }
-// }
+#partners-book {
+  padding-bottom: 30px;
+  .row {
+    display: flex;
+    justify-content: center;
+  }
+  .left-side {
+    text-align: center;
+  }
+  .left-side img {
+    display: block;
+    margin: auto;
+    max-width: 200px;
+  }
+  .right-side img {
+    display: none;
+  }
+  @include breakpoint(small) {
+    .left-side img {
+      display: none;
+    }
+    .right-side img {
+      display: block;
+    }
+  }
+}

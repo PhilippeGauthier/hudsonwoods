@@ -39,3 +39,22 @@
     color: white
   }
 }
+
+.partner-content {
+  display: flex;
+  align-items: center;
+}
+
+.makerLaunch {
+  margin-top: 10px;
+  background-color: #24acb9;
+  color: #fff;
+  padding: 6px 60px;
+  border: 1px solid transparent;
+  display: inline-block;
+  &:hover {
+    color: white;
+  }
+}
+
+

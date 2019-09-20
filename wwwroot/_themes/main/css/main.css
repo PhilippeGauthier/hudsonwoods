@@ -7721,6 +7721,33 @@ img {
   .hero.hero-intro .scrollme h1 {
     margin-top: 195px; } }
 
+#partners-book {
+  padding-bottom: 30px;
+  /* Landscape phone to portrait tablet */ }
+
+#partners-book .row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
+#partners-book .left-side {
+  text-align: center; }
+
+#partners-book .left-side img {
+  display: block;
+  margin: auto;
+  max-width: 200px; }
+
+#partners-book .right-side img {
+  display: none; }
+
+@media (min-width: 767px) {
+  #partners-book .left-side img {
+    display: none; }
+  #partners-book .right-side img {
+    display: block; } }
+
 nav {
   width: 100%;
   z-index: 1001; }
@@ -8831,6 +8858,23 @@ p.large {
 
 .brochure-btn:hover {
   background-color: #fc6366;
+  color: white; }
+
+.partner-content {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.makerLaunch {
+  margin-top: 10px;
+  background-color: #24acb9;
+  color: #fff;
+  padding: 6px 60px;
+  border: 1px solid transparent;
+  display: inline-block; }
+
+.makerLaunch:hover {
   color: white; }
 
 .tab-pane {

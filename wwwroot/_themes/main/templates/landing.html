@@ -23,16 +23,22 @@
 <section id="partners-book" class="content content-tiles beige centered">
   <div class="container">
     <div class="row">
-      <div class="col-md-offset-4 col-md-4">
-        <h3>Maker Partner Book</h3>
-        <p class="landingParagraph">All of the artisans who welped shape Hudson Woods in on book! Download the free PDF
-          for their product specs.</p>
-        <div style="text-align: center"><a class="makerLaunch" href="#" data-toggle="modal"
-            data-target="#contact">Download Specifications ></a></div>
+      <div class="col-md-7 partner-content">
+        <div class="left-side">
+          <h3>DOWNLOAD OUR HANDBOOK</h3>
+          <img src="{{ theme:img src="partner_book.png" }}" alt="">
+          <p class="landingParagraph">It took a village to bring Hudson Woods to life. Download the free guide for a
+            selection of the makers and product specs from Hudson Woods.</p>
+          <div style="text-align: center"><a class="makerLaunch" href="#" data-toggle="modal"
+              data-target="#contact">Download Book ></a></div>
+        </div>
+        <div class="right-side">
+          <img src="{{ theme:img src="partner_book.png" }}" alt="">
+        </div>
       </div>
     </div>
   </div>
-</section> 
+</section>
 
 
 
@@ -80,7 +86,7 @@
         <!-- Begin Mailchimp Signup Form -->
         <div id="mc_embed_signup">
           <form
-            action="https://hudsonwoods.us3.list-manage.com/subscribe/post?u=debb63dba6fc6484e0048cf97&amp;id=472c287ace"
+            action="https://hudsonwoods.us3.list-manage.com/subscribe/post?u=debb63dba6fc6484e0048cf97&amp;id=562305338d"
             method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" novalidate>
             <div id="mc_embed_signup_scroll container">
 
@@ -113,7 +119,8 @@
 
                 </div>
                 <div class="col-md-6 text-center">
-                  <a href="{{ booklet }}" target="_blank" class="btn btn-green transparent" id="bookDownload" disabled="disabled">Download Book</a>
+                  <a href="{{ booklet }}" target="_blank" class="btn btn-green transparent" id="bookDownload"
+                    disabled="disabled">Download Book</a>
                 </div>
               </div>
 
@@ -172,7 +179,7 @@
     }
 
     $('#mc-embedded-subscribe-form').ajaxChimp({
-      url: 'https://hudsonwoods.us3.list-manage.com/subscribe/post?u=debb63dba6fc6484e0048cf97&amp;id=472c287ace',
+      url: 'https://hudsonwoods.us3.list-manage.com/subscribe/post?u=debb63dba6fc6484e0048cf97&amp;id=562305338d',
       callback: mailchimpCallback
     });
 
