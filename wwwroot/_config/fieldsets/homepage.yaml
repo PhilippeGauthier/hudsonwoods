@@ -31,6 +31,11 @@ fields:
   landingParagraph:
     type: textarea
     display: Landing Page Sub Paragraph
+  booklet:
+    type: file
+    display: Images
+    destination: assets/img/landing
+    show_thumbnail: true
 
   landingTiles:
     display: Landing Tiles
