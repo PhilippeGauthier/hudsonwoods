@@ -1,4 +1,4 @@
-title: homepage
+title: Homepage
 
 fields:
 
@@ -36,7 +36,7 @@ fields:
     display: Booklet Download
     destination: assets/img/landing
     show_thumbnail: true
-
+    max_files: 1
   landingTiles:
     display: Landing Tiles
     type: grid

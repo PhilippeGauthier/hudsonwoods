@@ -7588,7 +7588,7 @@ img {
   -ms-flex-pack: center;
   justify-content: center;
   border: 15px solid white;
-  margin-top: 50px;
+  margin: 130px 0 100px;
   box-shadow: 0 0 40px black;
   padding-left: 30px;
   padding-right: 30px;
@@ -7597,11 +7597,11 @@ img {
 
 @media (min-width: 767px) {
   #header-availability .booklet-wrapper {
-    height: 760px; } }
+    height: 660px; } }
 
 @media (min-width: 1200px) {
   #header-availability .booklet-wrapper {
-    height: 960px; } }
+    height: 760px; } }
 
 #header-availability .brochure-btn {
   margin-top: 10px;
