@@ -33,7 +33,7 @@ fields:
     display: Landing Page Sub Paragraph
   booklet:
     type: file
-    display: Images
+    display: Booklet Download
     destination: assets/img/landing
     show_thumbnail: true
 
