@@ -14,6 +14,9 @@ fields:
   subHeadline:
     type: text
     display: Sub Headline
+  price:
+    type: text
+    display: Postcard Price
   brochure:
     type: file
     browse: false
