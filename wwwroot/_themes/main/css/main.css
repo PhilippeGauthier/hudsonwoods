@@ -7597,11 +7597,11 @@ img {
 
 @media (min-width: 767px) {
   #header-availability .booklet-wrapper {
-    height: 660px; } }
+    height: 760px; } }
 
 @media (min-width: 1200px) {
   #header-availability .booklet-wrapper {
-    height: 760px; } }
+    height: 860px; } }
 
 #header-availability .brochure-btn {
   margin-top: 10px;
