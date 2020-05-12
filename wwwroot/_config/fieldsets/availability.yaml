@@ -23,4 +23,51 @@ fields:
     display: Brochure File
     destination: assets/img/availability
     show_thumbnail: true
+  
+  heroImages:
+    display: Hero Images and Headlines
+    type: grid
+    starting_rows: 1
+    min_rows: 1
+    fields:
+      image:
+        type: file
+        browse: false
+        display: Images
+        destination: assets/img/upgrades
+        show_thumbnail: true
+        width: 25%
+      headline:
+        type: textarea
+        display: Headline
+      subHeadline:
+        type: textarea
+        display: Sub Headline
 
+  image:
+    type: file
+    browse: false
+    display: Image
+    destination: assets/img/in-the-area
+    show_thumbnail: true
+  content:
+    type: redactor
+    display: Description
+  availability:
+    type: text
+    display: Availability
+  license_details:
+    type: text
+    display: License Details for Legend
+  size:
+    type: text
+    display: Size
+  cost:
+    type: text
+    display: cost
+  floorplans:
+    type: file
+    browse: false
+    display: Floorplan Image
+    destination: assets/img/availability
+    show_thumbnail: true
