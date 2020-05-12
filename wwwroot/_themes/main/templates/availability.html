@@ -60,6 +60,14 @@
 				<div class="col-xs-12 col-md-10 col-md-offset-1">
 		
 					<div class="tab-content">
+
+							<div id="contract-signed"class="tab-pane fade">
+							{{ entries:listing folder="availability/contract-signed" sort_dir="asc" }}
+							
+							{{ theme:partial src="availability-mobile"}}
+							
+							{{ /entries:listing }}
+							</div>
 						
 							<div id="for-sale"class="tab-pane fade">
 							{{ entries:listing folder="availability/for-sale" sort_dir="asc" }}
@@ -77,13 +85,7 @@
 							{{ /entries:listing }}
 							</div>
 	
-							<div id="contract-signed"class="tab-pane fade">
-							{{ entries:listing folder="availability/contract-signed" sort_dir="asc" }}
-							
-							{{ theme:partial src="availability-mobile"}}
-							
-							{{ /entries:listing }}
-							</div>
+
 	
 							<div id="not-released"class="tab-pane fade">
 							{{ entries:listing folder="availability/not-released" sort_dir="asc" }}
