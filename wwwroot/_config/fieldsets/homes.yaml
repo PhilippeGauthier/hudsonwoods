@@ -22,6 +22,27 @@ fields:
         type: textarea
         display: Sub Headline
 
+
+  video_grid:
+    display: Video Grid
+    type: grid
+    starting_rows: 1
+    min_rows: 1
+    fields:
+      image:
+        type: file
+        browse: false
+        display: Images
+        destination: assets/img/homes
+        show_thumbnail: true
+        width: 25%
+      text:
+        type: text
+        display: Text
+      link:
+        type: text
+        display: Youtube Link
+
   locationMap:
     type: file
     browse: false
