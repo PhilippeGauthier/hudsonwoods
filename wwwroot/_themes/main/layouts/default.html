@@ -74,7 +74,12 @@ src="https://www.facebook.com/tr?id=1832634483660033&ev=PageView&noscript=1"
   <script type="text/javascript">
   (function(a,e,c,f,g,h,b,d){var k={ak:"971252061",cl:"OBcDCPPSxXAQ3cKQzwM"};a[c]=a[c]||function(){(a[c].q=a[c].q||[]).push(arguments)};a[g]||(a[g]=k.ak);b=e.createElement(h);b.async=1;b.src="//www.gstatic.com/wcm/loader.js";d=e.getElementsByTagName(h)[0];d.parentNode.insertBefore(b,d);a[f]=function(b,d,e){a[c](2,b,k,d,null,new Date,e)};a[f]()})(window,document,"_googWcmImpl","_googWcmGet","_googWcmAk","script");
   </script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+{{ if segment_1 === "dwellings"}}
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+  {{ /if }}
 </head>
 
  <body {{ if segment_1 === "availability" }}class="lighter-gray" {{ elseif segment_1 === "in-the-area" }} class="beige"{{ endif }} data-spy="scroll" data-target="#secondary-nav-list" onload="_googWcmGet('phone-number', '1-212-233-9187')">
