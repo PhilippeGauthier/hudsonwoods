@@ -23,14 +23,19 @@
 	
 	<div class="container">
 	<div class="row">
-		{{ video_grid }}
-		<div class="col-md-3 centered" style="margin-bottom: 20px">
-		<h3>{{ text }}</h3>
-		<a data-fancybox href="{{ link }}">
-			<img src="{{ image }}" alt="">
-		</a>
+		<div class="col-md-8 offset-md-2">
+			<div class="row">
+				{{ video_grid }}
+				<div class="col-md-6 centered" style="margin-bottom: 20px">
+				<h3>{{ text }}</h3>
+				<a data-fancybox href="{{ link }}">
+					<img src="{{ image }}" alt="">
+				</a>
+				</div>
+				{{ /video_grid }}
+			</div>
 		</div>
-		{{ /video_grid }}
+
 	</div>
 	</div>
 	</section>
