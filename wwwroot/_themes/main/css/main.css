@@ -9878,6 +9878,9 @@ p.large {
 #landing-tiles .tile img {
   height: 200px; }
 
+.landingParagraph {
+  margin-bottom: 30px; }
+
 /* Dots */
 .slick-slider {
   margin-bottom: 0; }
