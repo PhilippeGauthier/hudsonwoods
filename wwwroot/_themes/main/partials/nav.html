@@ -15,7 +15,7 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
-      {{ nav from="/" max_depth="1" }}
+      {{ nav from="/" max_depth="1" exclude="blog|availability|upgrades|in-the-area" }}
         <li><a href="{{ url }}"{{ if is_current || is_parent }} class="current"{{ endif }}>{{ title }} </a>
          {{ if is_current || is_parent }}
            {{ if children }}
