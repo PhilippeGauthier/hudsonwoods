@@ -20,25 +20,6 @@
   </div>
 </section>
 
-<section id="partners-book" class="content content-tiles beige centered">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-7 partner-content">
-        <div class="left-side">
-          <h3>DOWNLOAD OUR HANDBOOK</h3>
-          <img src="{{ theme:img src="partner_book.png" }}" alt="">
-          <p class="landingParagraph">It took a village to bring Hudson Woods to life. Download the free guide for a
-            selection of the makers and product specs from Hudson Woods.</p>
-          <div style="text-align: center"><a class="makerLaunch" href="#" data-toggle="modal"
-              data-target="#contact">Download Book ></a></div>
-        </div>
-        <div class="right-side">
-          <img src="{{ theme:img src="partner_book.png" }}" alt="">
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
 
 
@@ -73,113 +54,7 @@
 </section>
 
 
-<div class="centered-modal contact modal c" id="contact" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content lighter-gray">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-            aria-hidden="true">&times;</span></button>
-        <h3 style="margin-bottom: 10px;" id="myModalLabel">Hudson Woods Handbook</h3>
-        <p>Join our mailing list to download the book. Unsubscribe at any time.</p>
-      </div>
-      <div class="modal-body">
-        <!-- Begin Mailchimp Signup Form -->
-        <div id="mc_embed_signup">
-          <form
-            action="https://hudsonwoods.us3.list-manage.com/subscribe/post?u=debb63dba6fc6484e0048cf97&amp;id=562305338d"
-            method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" novalidate>
-            <div id="mc_embed_signup_scroll container">
 
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label for="mce-FNAME" class="desc">First Name </label>
-                    <input type="text" value="" required name="FNAME" class="form-control" id="mce-FNAME">
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label for="mce-LNAME" class="desc">Last Name </label>
-                    <input type="text" value="" required name="LNAME" class="form-control" id="mce-LNAME">
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-12">
-                  <div class="form-group">
-                    <label for="mce-EMAIL" class="desc">Email Address </label>
-                    <input type="email" value="" required name="EMAIL" class="email form-control" id="mce-EMAIL">
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-6 text-center">
-                  <input type="submit" value="Download" name="subscribe" id="submit" class="btn btn-green"
-                    disabled="disabled">
-
-                </div>
-              </div>
-
-            </div>
-            <div class="success"></div>
-            <div id="mce-responses" class="clear">
-              <div class="response" id="mce-error-response" style="display:none"></div>
-              <div class="response" id="mce-success-response" style="display:none"></div>
-            </div>
-            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
-                name="b_debb63dba6fc6484e0048cf97_472c287ace" tabindex="-1" value=""></div>
-        </div>
-        </form>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
-<script>
-  $('#contact').on('shown.bs.modal', function (e) {
-
-    const inputSelector = ':input[required]:visible';
-
-    function checkForm() {
-      // here, "this" is an input element
-      var isValidForm = true;
-      $(this.form).find(inputSelector).each(function () {
-        if (!this.value.trim()) {
-          isValidForm = false;
-        }
-      });
-      $(this.form).find('#submit').prop('disabled', !isValidForm);
-      return isValidForm;
-    }
-    $('#submit').closest('form')
-      // in a user hacked to remove "disabled" attribute, also monitor the submit event
-      .submit(function () {
-        // launch checkForm for the first encountered input,
-        // use its return value to prevent default if form is not valid
-        return checkForm.apply($(this).find(':input')[0]);
-      })
-      .find(inputSelector).keyup(checkForm).keyup();
-
-    var submitButtton = $('#submit');
-
-    var successPlaceholder = $('.success');
-    var form = $('#mc-embedded-subscribe-form');
-
-    function mailchimpCallback(resp) {
-      window.open("{{ booklet }}");
-
-    }
-
-    $('#mc-embedded-subscribe-form').ajaxChimp({
-      url: 'https://hudsonwoods.us3.list-manage.com/subscribe/post?u=debb63dba6fc6484e0048cf97&amp;id=562305338d',
-      callback: mailchimpCallback
-    });
-
-
-
-  })
-</script>
 
 {{# <div class="col-md-6">
       <label class="modal-label">Please add me to the mailing list
