@@ -6,12 +6,11 @@
 
       <div class="hero" style="background-image: url( {{ path src="{{ image }}" }} );">
         <div class="container scrollme">
-        <div class="animateme" data-when="exit" data-from="0" data-to="0.5" data-opacity="0" data-translatey="100" style="opacity: 1; -webkit-transform: translate3d(0px, 100px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(1);">
-    <h1>{{ headline }}</h1>
+       
+    {{# <h1>{{ headline }}</h1>
     {{ if subHeadline|not_empty }}
     <h3>{{ subHeadline }}</h3>
-    {{ endif }}
-        </div>
+    {{ endif }} #}}
 
       </div>
     </div>
