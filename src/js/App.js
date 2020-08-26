@@ -212,7 +212,7 @@ $('.slick-carousel-upgrades').slick({
 });
 
 $('.slick-carousel-landing').slick({
-  dots: true,
+  dots: false,
   arrows: false,
   infinite: true,
   speed: 2000,
