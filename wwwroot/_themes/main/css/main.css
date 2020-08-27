@@ -9437,9 +9437,6 @@ p.large {
   font-family: "adelle", Georgia, Cambria, "Times New Roman", Times, serif;
   font-size: 20px; }
 
-#story {
-  background-color: #ebe9e2; }
-
 #story p {
   font-size: 20px;
   line-height: 36px; }
@@ -9448,7 +9445,6 @@ p.large {
   font-size: 66px; }
 
 #story a {
-  font-size: 40px;
   font-weight: 500;
   border-bottom: 1px solid #6e736c;
   color: #6e736c;
