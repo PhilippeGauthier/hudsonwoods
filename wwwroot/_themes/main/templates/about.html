@@ -79,7 +79,7 @@
     <div id="makers-list" class="content-tiles centered">
         <div class="container">
             <div class="row tile-wrapper-large">
-                {{ entries:listing folder="about/makers" sort_dir="asc" }}
+                {{ entries:listing folder="about/makers" sort_dir="asc" limit="6" }}
                 <div class="col-xs-12 col-sm-6 col-lg-4 tile">
                     <div class="makers-tiles">
                         <a class="slide" target=_blank href="{{ link }}">
@@ -97,10 +97,37 @@
                     </div>
                 </div>
                 {{ /entries:listing }}
+                {{ entries:listing folder="about/makers" sort_dir="asc" offset="6" }}
+                <div class="col-xs-12 col-sm-6 col-lg-4 tile" id="additional-makers">
+                    <div class="makers-tiles">
+                        <a class="slide" target=_blank href="{{ link }}">
+                            <img class="slide-away" src="{{ image }}" alt="{{ title }}">
+                            <span class="slide-in">
+                                <img src="{{ logo }}" alt="">
+                            </span>
+                        </a>
+        
+                        <div class="slide-caption">
+                            <h3><a href="{{ link }}">{{ makerTitle }}</a></h3>
+                            <p class="slide-description">{{ makerTagline }}</p>
+                        </div>
+        
+                    </div>
+                </div>
+                {{ /entries:listing }}
+                <p class="large centered">
+                    <span id="view-more">View <span id="amount">More</span>Makers</span>
+                </p>
             </div>
         </div>
     </div>
 </section>
+
+
+<script>
+    $( "#view-more" ).click(function() {
+        $( "#additional-makers" ).slideToggle()});
+</script>
 
 <section id="area" class="lighter-gray">
     <a href="" class="anchor hero-anchor" id="area-anchor"></a>
@@ -352,7 +379,6 @@
 
 
 </section>
-
 
 
 
