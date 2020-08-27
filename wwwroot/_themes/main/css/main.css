@@ -9391,8 +9391,7 @@ p.large {
   top: 0;
   bottom: 0;
   left: 0;
-  right: 0;
-  border-radius: 50%; }
+  right: 0; }
 
 .partner-tile .circle-tile span, .partner-tile .circle-tile-overlay span {
   text-align: center;
@@ -9403,7 +9402,7 @@ p.large {
   color: white; }
 
 .partner-tile .circle-tile {
-  border: 15px solid #cccccc;
+  border: 5px solid #cccccc;
   background-position: center center;
   background-size: cover; }
 
