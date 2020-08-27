@@ -47,7 +47,7 @@ messages:
 
 # Configure notification email
 email:
-  to: "pgauthier@gmail.com"
+  to: dl@langarchitecture.com
   from: info@hudsonwoods.com
   subject: Hudson Woods Contact Inquiry
   automagic: true
