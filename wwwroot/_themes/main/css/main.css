@@ -8830,7 +8830,7 @@ p.large {
   text-align: center; }
 
 .dark {
-  color: #6e736c; }
+  color: #6e736c !important; }
 
 /**
 *
