@@ -9331,8 +9331,7 @@ p.large {
   left: 0;
   width: 100%;
   z-index: 5;
-  display: block;
-  background-color: #ebe9e2; }
+  display: block; }
 
 .makers-tiles .slide-caption h3 {
   font-size: 1.25em;
