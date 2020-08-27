@@ -70,6 +70,9 @@ fields:
   license_header:
     type: text
     display: License Header
+  license_explainer:
+    type: textarea
+    display: License Explainer
   license_grid:
     type: grid
     display: License Options

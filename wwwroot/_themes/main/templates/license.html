@@ -6,15 +6,6 @@
             {{ heroImages }}
             
             <div class="hero" style="background-image: url( {{ image }} );">
-                <div class="container scrollme">
-                    <div class="animateme" data-when="exit" data-from="0" data-to="0.55" data-opacity="0" data-translatey="100" style="opacity: 1; -webkit-transform: translate3d(0px, 100px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(1);">
-                        <h1>{{ headline }}</h1>
-                        {{ if subHeadline|not_empty }}
-                        <h3>{{ subHeadline }}</h3>
-                        {{ endif }}
-                    </div>
-                    
-                </div>
             </div>
             
             {{ /heroImages }}
@@ -25,6 +16,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-8 col-md-offset-2">
+                    <h2>License a Hudson Woods Design</h2>
+                    <span class="strong">Find Out How To Build Your Own Hudson Woods House.</span>
                     <p style="text-align: center" class="large">{{ license_page_intro }}</p>
                 </div>
             </div>
@@ -85,8 +78,9 @@
             <div class="row">
                 <div class="col-md-10 col-md-offset-1">
                     <h2>{{ license_header }}</h2>
+                    <p class="sub-header centered">{{ license_explainer }}</p>
                 </div>
-            </div>
+            {{# </div>
             <div class="row isolate">
 
                     {{ license_grid }}
@@ -101,7 +95,7 @@
                         </div>
                     </div>
                     {{ /license_grid }}
-                </div>
+                </div> #}}
 
         </div>
     </section>
@@ -131,11 +125,11 @@
                             <div class="form-group row mb-0">
                                 <label for="license-type" class="col-sm-12 col-form-label serif">License Type<span class="orange">*</span></label>
                             </div>
-                            <div class="form-group row mb-3">
+                            {{# <div class="form-group row mb-3">
                                 <div class="col-sm-12">
                                     <div class="dropdown">
                                         <button class="btn dropdown-toggle" type="button" id="dropdownMenuButtonLicense" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <span>Individual License</span>
+                                            <span>Land Type</span>
                                             <i class='fa fa-angle-down fa-lg'></i>
                                         </button>
                                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -145,7 +139,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> #}}
 
                             <input class="form-control secondary-contact" type="text" id="license-type" name="license-type" value="Individual License">
 
