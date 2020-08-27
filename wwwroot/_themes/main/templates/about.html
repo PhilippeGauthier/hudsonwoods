@@ -97,8 +97,9 @@
                     </div>
                 </div>
                 {{ /entries:listing }}
+                <div id="additional-makers"  style="display: none;">
                 {{ entries:listing folder="about/makers" sort_dir="asc" offset="6" }}
-                <div class="col-xs-12 col-sm-6 col-lg-4 tile" id="additional-makers" style="display: none;">
+                <div class="col-xs-12 col-sm-6 col-lg-4 tile">
                     <div class="makers-tiles">
                         <a class="slide" target=_blank href="{{ link }}">
                             <img class="slide-away" src="{{ image }}" alt="{{ title }}">
@@ -115,6 +116,7 @@
                     </div>
                 </div>
                 {{ /entries:listing }}
+                </div>
                 <p class="large centered">
                     <span id="view-more">View <span id="amount">More</span>Makers</span>
                 </p>
