@@ -131,7 +131,13 @@
     
     $( "#view-more" ).click(function() {
         $( "#additional-makers" ).slideToggle();
-        $('#amount').text('foo');
+        if ( $('#amount').text() =="More") {
+            $('#amount').text('Less');
+        }
+        else {
+            $('#amount').text('More');
+        }
+        
 
     }); 
 </script>
