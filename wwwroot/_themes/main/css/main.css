@@ -7293,6 +7293,9 @@ img {
 #comtact .modal-content {
   background-color: #f3f3f3; }
 
+#view-more:hover {
+  cursor: pointer; }
+
 @font-face {
   font-family: "icons";
   src: url("../../images/icons/icons.eot");
