@@ -8829,6 +8829,9 @@ p.large {
 .center, .centered, .text-center {
   text-align: center; }
 
+.dark {
+  color: #6e736c; }
+
 /**
 *
 * Button
