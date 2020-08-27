@@ -9381,8 +9381,8 @@ p.large {
   clear: none; }
 
 .partner-tile .circle {
-  width: 201px;
-  height: 201px;
+  width: 100%;
+  padding-bottom: 40%;
   margin: 0 auto 20px;
   position: relative; }
 
@@ -9403,13 +9403,13 @@ p.large {
   color: white; }
 
 .partner-tile .circle-tile {
-  border: 10px solid #cccccc;
+  border: 15px solid #cccccc;
   background-position: center center;
   background-size: cover; }
 
 .partner-tile .circle-tile-overlay {
   z-index: 999;
-  border: 10px solid #cccccc;
+  border: 5px solid #cccccc;
   transition: 0.2s;
   background-color: rgba(201, 190, 105, 0); }
 
@@ -9417,7 +9417,7 @@ p.large {
   background-color: rgba(201, 190, 105, 0.3); }
 
 .partner-tile img {
-  border: 10px solid #cccccc; }
+  border: 5px solid #cccccc; }
 
 .partner-tile h3 {
   color: #8c8779;

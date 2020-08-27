@@ -172,8 +172,8 @@
         clear: none;
     }
     .circle {
-        width: 201px;
-        height: 201px;
+        width: 100%;
+        padding-bottom: 40%;
         margin: 0 auto 20px;
         position: relative;
     }
@@ -194,13 +194,13 @@
 	    }
 	}
     .circle-tile {
-        border: 10px solid $light-gray; 
+        border: 15px solid $light-gray; 
         background-position: center center;
         background-size: cover;
     }
     .circle-tile-overlay {
         z-index: 999;
-        border: 10px solid $light-gray; 
+        border: 5px solid $light-gray; 
         @include transition(.2s);
         background-color: rgba($yellow,0);
         &:hover {
@@ -208,7 +208,7 @@
         }
     }
     img {
-        border: 10px solid $light-gray;
+        border: 5px solid $light-gray;
     }
     h3 {
         color: #8c8779;
