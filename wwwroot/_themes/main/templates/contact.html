@@ -23,12 +23,30 @@
   <div class="container">
     <div class="row">
 
-      <div class="col-md-3">
+      <div class="col-md-8">
 
-        <h3>Sales Inquiries</h3>
+        <h3>Inquiries</h3>
+        <p>Hudson Woods was a project by Lang Architecture. If you are interested in future developments, partnerships, or licenses, please fill out the form below.</p>
 
         <form role="form" id="form1" name="form1" class="wufoo topLabel page" autocomplete="off" enctype="multipart/form-data" method="post" novalidate="" action="https://sandersonj.wufoo.com/forms/z1jr7bc1537af2/#public">
           <input type="hidden" name="idstamp" id="idstamp" value="YourPostKey">
+          <div class="form-group row mb-0">
+            <label for="full-name" class="col-sm-12 col-form-label serif">Land Type<span class="orange">*</span></label>
+        </div>
+        <div class="form-group row mb-3">
+            <div class="col-sm-12">
+                <div class="dropdown">
+                    <button class="btn dropdown-toggle" type="button" id="dropdownMenuButtonLand" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span>I haven't Purchased Land Yet</span>
+                        <i class='fa fa-angle-down fa-lg'></i>
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item land-item" href="#">I haven't Purchased Land Yet</a>
+                        <a class="dropdown-item land-item" href="#">I have land to build on</a>
+                    </div>
+                </div>
+            </div>
+        </div>
           <div class="form-group">
             <label id="title8" for="Field8" class="desc">Name</label>
             <input id="Field8" name="Field8" type="text" class="form-control" value="" tabindex="1" onkeyup="">
@@ -59,56 +77,20 @@
         </form>
       </div>
 
-      <div class="col-md-offset-1 col-md-3">
-        <h3>Sales Contacts</h3>
-
-        {{ if salesCompany|not_empty }}
-        <p>{{ salesCompany }}</p>
-        {{ endif }}
-
-        {{ salesContacts }}
-        <ul class="contact-info">
-          {{ if salesName|not_empty }}
-          <li>{{ salesName }}</li>
-          {{ endif }}
-          <li class="phone-number">1-212-233-9187</li>
-          {{ if emailAddress|not_empty }}
-          <li><a id="sales-contact" href="mailto:{{ emailAddress }}">{{ emailAddress }}</a></li>
-          {{ endif }}
-        </ul>
-        {{ /salesContacts }}
-
-     </div>
 
      <div class="col-md-offset-1 col-md-3">
-        <h3>Media Contacts</h3>
-        {{ if mediaCompany|not_empty }}
-        <p>{{ mediaCompany }}</p>
-        {{ endif }}
+        <h3>Contact</h3>
+        <a href="tel:212-233-9187">212-233-9187</a>
+        <a href="mailto:info@hudsonwoods.com">info@hudsonwoods.com</a>
 
-        {{ mediaContacts }}
-          <ul class="contact-info">
-            {{ if mediaName|not_empty }}
-            <li>{{ mediaName }}</li>
-            {{ endif }}
-            {{ if phoneNumber|not_empty }}
-            <li>{{ phoneNumber }}</li>
-            {{ endif }}
-            {{ if emailAddress|not_empty }}
-            <li><a id="media-contact" href="mailto:{{ emailAddress }}">{{ emailAddress }}</a></li>
-            {{ endif }}
-          </ul>
-        {{ /mediaContacts }}
+        <h3>Lang Architecture</h3>
+        <p>285 West Broadway Suite 300
+          New York, NY 10013
+        </p>
+        <a href="tel:212-233-9187">212-233-9187</a>
+        <a href="mailto:info@hudsonwoods.com">inquiries@langarchitecture.com</a>
+        <a href="https://langarchitecutre.com">Lang Architecture</a>
 
-     <h3 class="map">Visit Us</h3>
-     <div id="map-info">
-      <a href="https://www.google.com/maps/preview/place/Hudson+Woods/@41.8838397,-74.3105647,17z/data=!4m2!3m1!1s0x0:0xb071e22e4a6d3201?hl=en" target="blank"><img src="{{ visitImage }}" alt=""></a>
-      <br>
-      <a href="https://www.google.com/maps/preview/place/Hudson+Woods/@41.8838397,-74.3105647,17z/data=!4m2!3m1!1s0x0:0xb071e22e4a6d3201?hl=en" target="blank">101 Ridgewood Rd, Kerhonkson, NY</a>
-    </div>
-    <div class="map-button">
-
-    </div>
   </div>
 </div>
 </div>
