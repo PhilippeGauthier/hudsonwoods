@@ -28,7 +28,7 @@
         <h3>Inquiries</h3>
         <p>Hudson Woods was a project by Lang Architecture. If you are interested in future developments, partnerships, or licenses, please fill out the form below.</p>
 
-        {{ raven:form  formset="license" attr="id:license-form" }}
+        {{ raven:form  formset="contact" attr="id:contact-form" }}
             <div class="inquire">
                 {{ if errors }}
                 <div class="alert alert-danger">
@@ -40,40 +40,23 @@
 
                             
 
-                {{# <div class="form-group row mb-0">
-                    <label for="license-type" class="col-sm-12 col-form-label serif">License Type<span class="orange">*</span></label>
-                </div> #}}
-                {{# <div class="form-group row mb-3">
-                    <div class="col-sm-12">
-                        <div class="dropdown">
-                            <button class="btn dropdown-toggle" type="button" id="dropdownMenuButtonLicense" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span>Land Type</span>
-                                <i class='fa fa-angle-down fa-lg'></i>
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item license-item" href="#" >Individual License</a>
-                                <a class="dropdown-item license-item" href="#" >Developer License</a>
-                                <a class="dropdown-item license-item" href="#" >Custom License / Design</a>
-                            </div>
-                        </div>
-                    </div>
-                </div> #}}
 
-                {{# <input class="form-control secondary-contact" type="text" id="license-type" name="license-type" value="Individual License"> #}}
 
                 <div class="form-group row mb-0">
-                    <label for="full-name" class="col-sm-12 col-form-label serif">Land Type<span class="orange">*</span></label>
+                    <label for="full-name" class="col-sm-12 col-form-label serif">Inquiry Type<span class="orange">*</span></label>
                 </div>
                 <div class="form-group row mb-3">
                     <div class="col-sm-12">
                         <div class="dropdown">
                             <button class="btn dropdown-toggle" type="button" id="dropdownMenuButtonLand" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span>I haven't Purchased Land Yet</span>
+                                <span>Select Inquiry Type</span>
                                 <i class='fa fa-angle-down fa-lg'></i>
                             </button>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item land-item" href="#">I haven't Purchased Land Yet</a>
-                                <a class="dropdown-item land-item" href="#">I have land to build on</a>
+                                <a class="dropdown-item land-item" href="#">Developments</a>
+                                <a class="dropdown-item land-item" href="#">Partnerships</a>
+                                <a class="dropdown-item land-item" href="#">Design Licenses</a>
+                                <a class="dropdown-item land-item" href="#">Custom Home Designs</a>
                             </div>
                         </div>
                     </div>
