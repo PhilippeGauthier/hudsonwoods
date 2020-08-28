@@ -9385,7 +9385,8 @@ p.large {
   clear: none; }
 
 .partner-tile .circle {
-  width: 100%;
+  width: 200px;
+  height: 200px;
   padding-bottom: 60%;
   margin: 0 auto 20px;
   position: relative; }
@@ -9395,7 +9396,8 @@ p.large {
   top: 0;
   bottom: 0;
   left: 0;
-  right: 0; }
+  right: 0;
+  border-radius: 50%; }
 
 .partner-tile .circle-tile span, .partner-tile .circle-tile-overlay span {
   text-align: center;
