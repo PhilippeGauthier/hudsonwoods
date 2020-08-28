@@ -125,6 +125,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   {{ if segment_1 === "availability" }}
   <script src="{{ theme:js src="AvailabilityGeojson.js" }}"></script>
   {{ endif }}
+  {{ if segment_1 ==="dwellings" }}
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+  {{ /if }}
   <!-- build:js -->
   <script src="{{ theme:js }}"></script>
   <!-- endbuild -->
