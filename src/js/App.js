@@ -319,12 +319,12 @@ $('#media-contact').on('click', function() {
 
 // Update dropdown values on click
 
-$(document).on('click','.license-item',function(e){
+$(document).on('click','.land-item',function(e){
   e.preventDefault()
   var text = $(this).text();
   console.log(text);
   $('#dropdownMenuButtonLicense').text(text).append("<i class='fa fa-angle-down'></i>");
-  $('#license-type').attr("value", text);
+  $('#land-status').attr("value", text);
 });
 
 $(document).on('click','.inquiry-item',function(e){
