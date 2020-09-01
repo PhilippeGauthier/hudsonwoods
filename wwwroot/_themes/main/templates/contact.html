@@ -116,6 +116,7 @@
 
 <script>
     $('.inquiry-item').on('click', function(){
+        event.preventDefault();
         $('#inquiry-type').val($(this).html());
     });
 </script>
