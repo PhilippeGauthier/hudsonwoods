@@ -50,11 +50,12 @@ messages:
   years: "That needs to be a number"
 
 # Configure notification email
-# email:
-#   to: "sales@hudsonwoods.com"
-#   from: info@hudsonwoods.com
-#   subject: Hudson Woods License Inquiry
-#   automagic: true
+email:
+  # to: "sales@hudsonwoods.com"
+  to: "pgauthier@gmail.com"
+  from: info@hudsonwoods.com
+  subject: Hudson Woods License Inquiry
+  automagic: true
 
 
 datestamp_format: "m/d/Y"
