@@ -46,10 +46,10 @@
                                 <i class='fa fa-angle-down fa-lg'></i>
                             </button>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item land-item" href="#">Developments</a>
-                                <a class="dropdown-item land-item" href="#">Partnerships</a>
-                                <a class="dropdown-item land-item" href="#">Design Licenses</a>
-                                <a class="dropdown-item land-item" href="#">Custom Home Designs</a>
+                                <a class="dropdown-item inquiry-item" href="#">Developments</a>
+                                <a class="dropdown-item inquiry-item" href="#">Partnerships</a>
+                                <a class="dropdown-item inquiry-item" href="#">Design Licenses</a>
+                                <a class="dropdown-item inquiry-item" href="#">Custom Home Designs</a>
                             </div>
                         </div>
                     </div>
@@ -114,3 +114,8 @@
 </div>
 </section>
 
+<script>
+    $('.inquiry-item').on('click', function(){
+        $('#inquiry-type').val($(this).html());
+    });
+</script>
