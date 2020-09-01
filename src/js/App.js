@@ -327,11 +327,11 @@ $(document).on('click','.license-item',function(e){
   $('#license-type').attr("value", text);
 });
 
-$(document).on('click','.land-item',function(e){
+$(document).on('click','.inquiry-item',function(e){
   e.preventDefault()
   var text = $(this).text();
   console.log(text);
   $('#dropdownMenuButtonLand').text(text).append("<i class='fa fa-angle-down'></i>");
-  $('#land-status').attr("value", text);
+  $('#inquiry-type').attr("value", text);
 });
 
