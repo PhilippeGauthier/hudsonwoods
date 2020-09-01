@@ -14,7 +14,6 @@ submission_save_path: _forms/_license/
 # Fields allowed to be submitted in the form, automatically
 # purging anything and everything else
 allowed:
-  - license-type
   - land-status
   - first-name
   - last-name
@@ -51,8 +50,8 @@ messages:
 
 # Configure notification email
 email:
-  # to: "sales@hudsonwoods.com"
-  to: "pgauthier@gmail.com"
+  to: "sales@hudsonwoods.com"
+  # to: "pgauthier@gmail.com"
   from: info@hudsonwoods.com
   subject: Hudson Woods License Inquiry
   automagic: true
