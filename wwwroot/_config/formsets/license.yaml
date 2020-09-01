@@ -50,7 +50,7 @@ messages:
 
 # Configure notification email
 email:
-  to: "sales@hudsonwoods.com"
+  to: "dl@langarchitecture.com"
   # to: "pgauthier@gmail.com"
   from: info@hudsonwoods.com
   subject: Hudson Woods License Inquiry
