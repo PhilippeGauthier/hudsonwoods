@@ -46,11 +46,12 @@ messages:
   years: "That needs to be a number"
 
 # Configure notification email
-# email:
-#   to: dl@langarchitecture.com
-#   from: info@hudsonwoods.com
-#   subject: Hudson Woods Contact Inquiry
-#   automagic: true
+email:
+  # to: dl@langarchitecture.com
+  to: "pgauthier@gmail.com"
+  from: info@hudsonwoods.com
+  subject: Hudson Woods Contact Inquiry
+  automagic: true
 
 
 datestamp_format: "m/d/Y"
