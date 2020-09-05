@@ -115,6 +115,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 {{ if segment_1 == "contact" }}
 {{ theme:partial src="modals/contact" }}
 {{ /if}}
+{{ if segment_1 == "dwellings" }}
+{{ theme:partial src="modals/partner-book-script" }}
+{{ /if }}
 
   {{ if segment_1 ==="in-the-area" || segment_1 ==="about" }}
   <script src="{{ theme:js src="leaflet_0.8.min" }}"></script>
