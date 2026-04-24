@@ -1,113 +1,147 @@
 
 <section id="header-contact" class="hero-header">
 
-  {{ theme:partial src="nav" }}
-
-  <div class="slick-carousel" >
-    {{ heroImages }}
-      <div class="hero" style="background-image: url( {{ image }} );">
-
-      </div>
-    {{ /heroImages }}
+    {{ theme:partial src="nav" }}
+  
+    <div class="slick-carousel" >
+      {{ heroImages }}
+        <div class="hero" style="background-image: url( {{ image }} );">
+  
+        </div>
+      {{ /heroImages }}
+    </div>
+  </section>
+  
+  <section class="contact content large">
+    <div class="container">
+      <div class="row">
+  
+        <div class="col-md-8">
+  
+          <h3>Inquiries</h3>
+          <p style="font-size: 20px;">Hudson Woods was a project by Lang Architecture. If you are interested in future developments, partnerships, licenses, or custom homes, get in touch with us by emailing us at:</p>
+          <p><a style="font-size: 20px; text-decoration: underline;" href="mailto:inquiries@langarchitecture.com">inquiries@langarchitecture.com</a></p>
+  
+  
+          <!-- {{ raven:form  formset="contact" attr="id:contact-form" }}
+              <div class="inquire">
+                  {{ if errors }}
+                  <div class="alert alert-danger">
+                      {{ errors }}
+                      {{ value }}<br>
+                      {{ /errors }}
+                  </div>
+                  {{ /if }}
+  
+                              
+  
+  
+  
+                  <div class="form-group row mb-0">
+                      <label for="full-name" class="col-sm-12 col-form-label serif">Inquiry Type<span class="orange">*</span></label>
+                  </div>
+                  <div class="form-group row mb-3">
+                      <div class="col-sm-12">
+                          <div class="dropdown">
+                              <button class="btn dropdown-toggle" type="button" id="dropdownMenuButtonLand" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  <span>Select Inquiry Type</span>
+                                  <i class='fa fa-angle-down fa-lg'></i>
+                              </button>
+                              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                  <a class="dropdown-item inquiry-item" href="#">Developments</a>
+                                  <a class="dropdown-item inquiry-item" href="#">Partnerships</a>
+                                  <a class="dropdown-item inquiry-item" href="#">Design Licenses</a>
+                                  <a class="dropdown-item inquiry-item" href="#">Custom Home Designs</a>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+  
+                  <input class="form-control secondary-contact" type="text" id="inquiry-type" name="inquiry-type" value="Unselected">
+  
+                              
+                  <div class="form-group row mb-0">
+                      <label for="email" class="col-sm-12 col-form-label serif">Email<span class="orange">*</span></label>
+                  </div>
+                  <div class="form-group row">
+                      <div class="col-sm-12">
+                          <input class="form-control" required type="text" id="email" name="email" placeholder="abc@email.com">
+                      </div>
+                  </div>
+       
+                              
+                  <div class="form-group row mb-0 mt-1">
+                      <label for="comment" class="col-sm-12 col-form-label serif">How Can We Help?</label>
+                  </div>
+                  <div class="form-group row mb-1">
+                      <div class="col-sm-12">
+                          <textarea class="form-control" rows="6" type="text" id="comment" name="comment"></textarea>
+                      </div>
+                  </div>
+                  <div class="form-group row secondary-contact">
+                      <div class="col-sm-12">
+                          <textarea class="form-control"  type="text" id="secondary-contact" name="secondary-contact" ></textarea>
+                      </div>
+                  </div>
+                              
+                  <div class="form-group row">
+                      <div class="col-sm-12">
+                          <button 
+                              class="g-recaptcha button-inquire"
+                              type="submit"
+                              id="inquire-button"
+                              data-sitekey="6LcQGgIrAAAAAM0Q_H4YJb0xJn99lWjvhTY9yyjX"
+                              data-callback="onSubmit">
+                              Submit
+                          </button>
+                      </div>
+                  </div>
+                              
+                              
+                              
+              </div>
+          {{ /raven:form }} -->
+        </div>
+  
+  
+       <div class="col-md-offset-1 col-md-3">
+  
+  
+  
+    </div>
   </div>
-</section>
-
-<section class="contact content">
-  <div class="container">
-    <div class="row">
-
-      <div class="col-md-8">
-
-        <h3>Inquiries</h3>
-        <p>Hudson Woods was a project by Lang Architecture. If you are interested in future developments, partnerships, licenses, or custom homes, please fill out the form below.</p>
-
-        {{ raven:form  formset="contact" attr="id:contact-form" }}
-            <div class="inquire">
-                {{ if errors }}
-                <div class="alert alert-danger">
-                    {{ errors }}
-                    {{ value }}<br>
-                    {{ /errors }}
-                </div>
-                {{ /if }}
-
-                            
-
-
-
-                <div class="form-group row mb-0">
-                    <label for="full-name" class="col-sm-12 col-form-label serif">Inquiry Type<span class="orange">*</span></label>
-                </div>
-                <div class="form-group row mb-3">
-                    <div class="col-sm-12">
-                        <div class="dropdown">
-                            <button class="btn dropdown-toggle" type="button" id="dropdownMenuButtonLand" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span>Select Inquiry Type</span>
-                                <i class='fa fa-angle-down fa-lg'></i>
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item inquiry-item" href="#">Developments</a>
-                                <a class="dropdown-item inquiry-item" href="#">Partnerships</a>
-                                <a class="dropdown-item inquiry-item" href="#">Design Licenses</a>
-                                <a class="dropdown-item inquiry-item" href="#">Custom Home Designs</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <input class="form-control secondary-contact" type="text" id="inquiry-type" name="inquiry-type" value="Unselected">
-
-                            
-                <div class="form-group row mb-0">
-                    <label for="email" class="col-sm-12 col-form-label serif">Email<span class="orange">*</span></label>
-                </div>
-                <div class="form-group row">
-                    <div class="col-sm-12">
-                        <input class="form-control" required type="text" id="email" name="email" placeholder="abc@email.com">
-                    </div>
-                </div>
-     
-                            
-                <div class="form-group row mb-0 mt-1">
-                    <label for="comment" class="col-sm-12 col-form-label serif">How Can We Help?</label>
-                </div>
-                <div class="form-group row mb-1">
-                    <div class="col-sm-12">
-                        <textarea class="form-control" rows="6" type="text" id="comment" name="comment"></textarea>
-                    </div>
-                </div>
-                <div class="form-group row secondary-contact">
-                    <div class="col-sm-12">
-                        <textarea class="form-control"  type="text" id="secondary-contact" name="secondary-contact" ></textarea>
-                    </div>
-                </div>
-                            
-                <div class="form-group row">
-                    <div class="col-sm-12">
-                        <button type="submit" id="inquire-button" class="button-inquire">Submit</button>
-                    </div>
-                </div>
-                            
-                            
-                            
-            </div>
-        {{ /raven:form }}
-      </div>
-
-
-     <div class="col-md-offset-1 col-md-3">
-
-        <h3 style="margin-top: 50px">Lang Architecture</h3>
-        <p>285 West Broadway Suite 300
-          New York, NY 10013
-        </p>
-        <a href="tel:212-233-9187">212-233-9187</a>
-        <a href="mailto:info@hudsonwoods.com">inquiries@langarchitecture.com</a>
-        <br>
-        <a href="http://langarchitecture.com/">Lang Architecture</a>
-
   </div>
-</div>
-</div>
-</section>
-
+  </section>
+  
+  <script>
+      // Add event listener when document loads
+      document.addEventListener('DOMContentLoaded', function() {
+          var form = document.getElementById("contact-form");
+          form.addEventListener('submit', function(e) {
+              e.preventDefault();
+          });
+      });
+  
+      function onSubmit(token) {
+          var form = document.getElementById("contact-form");
+          var formData = new FormData(form);
+          
+          // Submit form data using fetch
+          fetch(form.action, {
+              method: 'POST',
+              body: formData
+          })
+          .then(function(response) {
+              // Clear form after successful submission
+              form.reset();
+              // Optionally show success message
+              $('#success-inquiry').modal('show');
+              document.getElementById("contact-form").reset();
+          })
+          .catch(function(error) {
+              console.error('Error:', error);
+          });
+      }
+  </script>
+  
+  

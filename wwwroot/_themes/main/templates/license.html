@@ -1,3 +1,5 @@
+
+
 <div class="license">
     <section id="header-license" class="hero-header">
         {{ theme:partial src="nav" }}
@@ -73,12 +75,15 @@
             </div>
         </div>
     </section>
-    <section class="content large top-only lighter-gray centered">
+    <section class="content large lighter-gray centered">
         <div class="container">
             <div class="row">
                 <div class="col-md-10 col-md-offset-1">
                     <h2>{{ license_header }}</h2>
-                    <p class="sub-header centered">{{ license_explainer }}</p>
+                    <!-- <p class="sub-header centered">{{ license_explainer }}</p> -->
+                    <p>Interested? Get in touch by Sending us a message and we'll get back to you as soon as possible.</p>
+                    <br>
+                    <p><a style="font-size: 20px; text-decoration: underline;" href="mailto:inquiries@langarchitecture.com">inquiries@langarchitecture.com</a></p>
                 </div>
             {{# </div>
             <div class="row isolate">
@@ -99,7 +104,7 @@
 
         </div>
     </section>
-    <section class="content lighter-gray centered">
+    <!-- <section class="content lighter-gray centered">
         <div class="container">
             <div class="row mt-1 justify-content-center">
                 <div class="col-md-12 text-center">
@@ -107,8 +112,8 @@
                 </div>
             </div>
             <div class="row mt-1 justify-content-center">
-                <div class="col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
-                    
+                <div class="col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 ">
+                   
                     
                         {{ raven:form  formset="license" attr="id:license-form" }}
                         <div class="inquire">
@@ -120,28 +125,6 @@
                             </div>
                             {{ /if }}
 
-                            
-
-                            {{# <div class="form-group row mb-0">
-                                <label for="license-type" class="col-sm-12 col-form-label serif">License Type<span class="orange">*</span></label>
-                            </div> #}}
-                            {{# <div class="form-group row mb-3">
-                                <div class="col-sm-12">
-                                    <div class="dropdown">
-                                        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButtonLicense" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <span>Land Type</span>
-                                            <i class='fa fa-angle-down fa-lg'></i>
-                                        </button>
-                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                            <a class="dropdown-item license-item" href="#" >Individual License</a>
-                                            <a class="dropdown-item license-item" href="#" >Developer License</a>
-                                            <a class="dropdown-item license-item" href="#" >Custom License / Design</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div> #}}
-
-                            {{# <input class="form-control secondary-contact" type="text" id="license-type" name="license-type" value="Individual License"> #}}
 
                             <div class="form-group row mb-0">
                                 <label for="full-name" class="col-sm-12 col-form-label serif">Land Type<span class="orange">*</span></label>
@@ -168,10 +151,10 @@
                             </div>
                             <div class="form-group row">
                                 <div class="col-sm-6">
-                                    <input class="form-control" required type="text" id="first-name" name="first-name" placeholder="First">
+                                    <input class="form-control" required type="text" id="first-name" name="first-name" placeholder="First" autocomplete="given-name">
                                 </div>
                                 <div class="col-sm-6">
-                                    <input class="form-control" required type="text" id="last-name" name="last-name" placeholder="Last Name">
+                                    <input class="form-control" required type="text" id="last-name" name="last-name" placeholder="Last Name" autocomplete="family-name">
                                 </div>
                             </div>
                             
@@ -180,7 +163,7 @@
                             </div>
                             <div class="form-group row">
                                 <div class="col-sm-12">
-                                    <input class="form-control" required type="text" id="email" name="email" placeholder="abc@email.com">
+                                    <input class="form-control" required type="email" id="email" name="email" placeholder="abc@email.com" autocomplete="email">
                                 </div>
                             </div>
                             <div class="form-group row mb-0">
@@ -188,7 +171,7 @@
                             </div>
                             <div class="form-group row">
                                 <div class="col-sm-12">
-                                    <input class="form-control" type="text" id="phone" name="phone" placeholder="222-222-2222">
+                                    <input class="form-control" type="tel" id="phone" name="phone" placeholder="222-222-2222" autocomplete="tel">
                                 </div>
                             </div>
                             
@@ -208,19 +191,26 @@
                             
                             <div class="form-group row">
                                 <div class="col-sm-12">
-                                    <button type="submit" id="inquire-button" class="button-inquire">Submit</button>
+                                    <button 
+                                        class="g-recaptcha button-inquire"
+                                        type="submit"
+                                        id="inquire-button"
+                                        data-sitekey="6LcQGgIrAAAAAM0Q_H4YJb0xJn99lWjvhTY9yyjX"
+                                        data-callback="onSubmit">
+                                        Submit
+                                    </button>
                                 </div>
                             </div>
                             
                             
                             
                         </div>
-                    {{ /raven:form }}
+                        {{ /raven:form }}
                     
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
     <section class="content large centered">
         <div class="container">
             <div class="row">
@@ -270,5 +260,34 @@
   </div>
 </div>
 
+<!-- Replace the variables below. -->
+<script>
+    // Add event listener when document loads
+    document.addEventListener('DOMContentLoaded', function() {
+        var form = document.getElementById("license-form");
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+        });
+    });
 
+    function onSubmit(token) {
+        var form = document.getElementById("license-form");
+        var formData = new FormData(form);
+        
+        // Submit form data using fetch
+        fetch(form.action, {
+            method: 'POST',
+            body: formData
+        })
+        .then(function(response) {
+            // Clear form after successful submission
+            form.reset();
+            // Optionally show success message
+            alert('Form submitted successfully!');
+        })
+        .catch(function(error) {
+            console.error('Error:', error);
+        });
+    }
+</script>
 
